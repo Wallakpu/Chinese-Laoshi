@@ -1,0 +1,99 @@
+:root{
+    --black-clr: #333;
+    --theme-clr: #e53e3e;
+    --select-clr:#d53030;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--black-clr);
+    background-color: white;
+}
+
+.header {
+    background-color: white;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(230, 198, 140, 0.9);
+    box-shadow: 0 1px 10px rgba(237, 185, 136, 0.1);
+}
+
+.nav-container{
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e53e3e;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: #e53e3e;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color:#666;
+    font-weight: 500;
+    padding: 7px 7px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #cc5353;
+    background-color: #fee2e2;
+    border-radius: 8px;
+    padding: 7px 7px;
+}
+
+.nav-links .login-btn {
+    background-color: var(--theme-clr);
+    color: rgb(255, 255, 255); 
+    border-radius: 8px;
+    padding: 7px 25px ; 
+    text-decoration: none;
+    font-weight: 400 ;
+    box-shadow: 0 1px 4px #d53030;
+}
+
+.nav-links .login-btn:hover {
+    background: var(--select-clr);
+    color: white; 
+    padding: 7px 25px ; 
+}

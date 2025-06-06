@@ -1,0 +1,350 @@
+:root{
+    --black-clr: #333;
+    --theme-clr: #e53e3e;
+    --select-clr:#d53030;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(135deg, #feefef, #fee2e3);
+}
+
+.heading {
+   padding: 160px 0 0;
+   text-align: center;
+}
+
+.heading-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    gap: 4rem;
+    align-items: center;
+    text-align: center;
+}
+
+.badge {
+    background-color: #feefef;
+    color: var(--theme-clr);
+    font-size: 0.9rem;
+    font-weight: 650;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 0.2px solid var(--theme-clr);
+    border-radius: 20px;
+    padding: 0px 8px;
+    margin-bottom: 0.75rem;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 750;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+.description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6; 
+}
+
+.login-note{
+    background-color: #fefce8;
+    padding: 1rem 2rem;
+    margin: 2rem auto;
+    max-width: 400px;
+    border: 1px solid #ffeaa7;
+    color: #856404;
+}
+
+.courses {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 2rem;
+    margin:4rem 10rem;
+    max-width: 1200px;
+}
+
+
+.class-box{
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.class-box:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon{
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #e53e3e 0%, #db7373 100%);
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.class-title{
+    font-size: 1.8rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.class-description{
+    color: #718096;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.class-price{
+    font-size: 2rem;
+    color: #e53e3e;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.offer-list{
+    list-style: none;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.tick{
+    color: #42b34b;
+}
+
+.free-trial{
+    background: #f0fdf4;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    color: #318b46;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 1px solid #c3e6cb;
+}
+
+.select-button{
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+    background: linear-gradient(135deg, #e53e3e 0%, #db7373 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.select-button:hover{
+    background: #c53030;
+    transform: translateY(-2px);
+}
+
+ @media (max-width: 768px) {
+            .courses {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+ }
+
+ #scroll-down{
+    text-align: center;
+    color: var(--theme-clr);
+    font-weight: bold;
+    font-size: 20px;
+ }
+
+ .booking-card{
+    background-color: white;
+    margin: 6rem 10rem 2rem 10rem;
+    border-radius: 12px;
+    padding: 3rem 7rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+
+ .booking-txts {
+    text-align: center;
+    font-size: 25px;
+ }
+
+ .form-input{
+    margin-bottom: 30px;
+ }
+
+ .form-input label {
+    display: block;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 12px;
+    font-size: 1rem;
+ }
+
+ .hsk-select{
+    width: 100%;
+    padding: 13px 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: white;
+    color: #2d3748;
+    transition: all 0.3s ease;
+    cursor: pointer;
+ }
+
+ .hsk-select:hover {
+    border-color: #e53e3e;
+    box-shadow: 0 4px 12px rgba(229, 62, 62, 0.15);
+ }
+
+ .date-select{
+    width: 100%;
+    padding: 13px 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: white;
+    color: #2d3748;
+    transition: all 0.3s ease;
+    cursor: pointer;
+ }
+
+.date-select:hover {
+    border-color: #e53e3e;
+    box-shadow: 0 4px 12px rgba(229, 62, 62, 0.15);
+}
+
+.time-select {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.time-option{
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.time-option:hover {
+    border-color: #e53e3e;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(229, 62, 62, 0.15);
+}
+
+.specific-times {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.time-btn {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 9px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #2d3748;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+
+.time-btn:hover {
+    border-color: #e53e3e;
+    color: #e53e3e;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(229, 62, 62, 0.15);
+}
+
+.book-btn {
+    width: 100%;
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    font-weight: 550;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+}
+
+.book-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 19px rgba(229, 62, 62, 0.4);
+}
+
+#confirmation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+.success-box {
+    background:#f0fdf4;
+    border-radius: 20px;
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: 0 19px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 0 10rem 2rem 10rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.success-icon {
+    margin-bottom: 30px;
+}
+
+.success-tick {
+    display: inline-block;
+    font-size: 4rem;
+    color: #42b34b;
+    animation: checkmark 0.6s ease-in-out 0.3s both;
+}
+
+.success-description{
+    margin: 1rem;
+}
+
+.success-any{
+    color:#b7bbbb;
+    display: block;
+}
+

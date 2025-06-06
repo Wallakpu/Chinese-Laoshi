@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="/styles/quiz.css">
+  <link rel="stylesheet" href="/styles/navbar.css">
+  <link rel="stylesheet" href="/styles/footer.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+     <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">中</div>
+                <a href ="/index.html" style="text-decoration: none;">
+                Chinese Laoshi
+                </a>
+            </div>
+            <div class ="nav-links" id="navMenu">
+                <li><a href="character.html">HSK Characters</a></li>
+                <li><a href="/pages/lesson.html">Online Classes</a></li>
+                <li><a href="/pages/quiz.html">Level Test</a></li>
+                <li><a href="pricing.html">Premium</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="/pages/about.html">About Us</a></li>
+                <li><a href= "login.html" class="login-btn"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login</a></li>  
+            </div>  
+       </div>
+    </header>
+  <div class="container">
+    <h1>Quick Quiz</h1>
+    <p id="questions">What is the largest planet on the earth.</p>
+    <button class="btn">btn</button>
+    <button class="btn">btn</button>
+    <button class="btn">btn</button>
+    <button class="btn">btn</button>
+    <button id="next">Next</button>
+  </div>
+  <dialog class="dialoge">
+    <h1 id="Quiz Completed"></h1>
+    <p id="msg"></p>
+    <button id="OK" onclick="closeDialoge()">Ok</button>
+  </dialog>
+  <script src="/script/quiz.js"></script>
+
+
+</body>
+</html>

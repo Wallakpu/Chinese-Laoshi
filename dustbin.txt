@@ -1,0 +1,26 @@
+
+    <section class="application" id="application-popup">
+        <div class="app-container">
+            <div class="titles"> Schedule Your <span class="class-type">Private Class</span></div>
+            <p class="descriptions">
+                Your first class is a <span class="green">FREE trial.</span> Let's find a time that works for you!
+            </p>
+
+            <form action="submit.html">
+            <label for ="hsk">Your HSK Level</div>
+            <select id="hsk" name="hsk-select" >
+                <option value="HSK 1">HSK 1</option>
+                <option value="HSK 2">HSK 2</option>
+                <option value="HSK 3">HSK 3</option>
+                <option value="HSK 4">HSK 4</option>
+                <option value="HSK 5">HSK 5</option>
+                <option value="HSK 6">HSK 6</option>
+            </select><br>
+            <label for ="date">Preferred date</label><br>
+            <input type="date" class="date-input" id="date" name="date">
+        </date>
+            </form>
+        </div>
+    </section>
+
+    

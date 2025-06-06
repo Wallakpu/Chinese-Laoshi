@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Class</title>
+    <link rel="stylesheet" href="/styles/lesson.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!--NAVBAR-->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">中</div>
+                <a href ="/index.html" style="text-decoration: none;">
+                Chinese Laoshi
+                </a>
+            </div>
+            <div class ="nav-links" id="navMenu">
+                <li><a href="character.html">HSK Characters</a></li>
+                <li><a href="/pages/lesson.html">Online Classes</a></li>
+                <li><a href="/pages/quiz.html">Level Test</a></li>
+                <li><a href="pricing.html">Premium</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="/pages/about.html">About Us</a></li>
+                <li><a href= "login.html" class="login-btn"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login</a></li>  
+            </div>  
+       </div>
+    </header>
+
+    <section class="heading">
+        <div class="heading-container">
+            <div class="heading-contentS fade-in">
+                <div class ="badge"><i class="fa-solid fa-user-group"></i>Interactive Learning</div>
+                <h1 class = "title">
+                    Book Your Online Chinese Class<br>
+                </h1>
+                <p class="description">
+                    Choose between personalized private lessons or engaging group<br>
+                sessions. Your first class is always on us!
+                </p>
+            </div>
+            <div class="login-note">
+                    Please sign up or log in to book a class
+            </div>
+        </div>
+    </section>
+
+    <nav class="courses">
+        <div class="class-box">
+            <div class="card-icon"><i class="fa-solid fa-user"></i></div>
+            <h2 class="titles">Private Class</h2>
+            <p class="descriptions">One-on-one personalized lessons with a dedicated teacher.</p>
+            <div class ="class-price">
+                 $30/hour
+            </div>
+            <div class ="offer-list">
+                <div class="offer"><span class="tick"><i class="fa-regular fa-circle-check"></i></span> Personalized curriculum</div>
+                <div class="offer"><span class="tick"><i class="fa-regular fa-circle-check"></i></span> Flexible scheduling</div>
+                <div class="offer"><span class="tick"><i class="fa-regular fa-circle-check"></i></span> Direct teacher feedback</div>
+                <div class="offer"><span class="tick"><i class="fa-regular fa-circle-check"></i></span> Focus on your speacific goals</div>
+            </div>
+            <div class="free-trial">
+                <i class="fa-solid fa-gift"></i> First Class Free Trial!
+            </div>
+            <div class="select-button">
+                Select Class
+            </div>
+        </div>
+        <div class="class-box">
+            <div class="card-icon"><i class="fa-solid fa-user-group"></i></div>
+            <h2 class="titles">Group Class</h2>
+            <p class="descriptions">Learn with small group of peers at a similar level.</p>
+            <div class ="class-price">
+                 $19/hour
+            </div>
+            <div class ="offer-list">
+                <div class="offer"><span class="tick"><i class="fa-regular fa-circle-check"></i></span> Interactive group activities</div>
+                <div class="offer"><span class="tick"><i class="fa-regular fa-circle-check"></i></span> Collaborative learning</div>
+                <div class="offer"><span class="tick"><i class="fa-regular fa-circle-check"></i></span> Fixed schedule</div>
+                <div class="offer"><span class="tick"><i class="fa-regular fa-circle-check"></i></span> Peer motivation</div>
+            </div>
+            <div class="free-trial">
+                <i class="fa-solid fa-gift"></i> First Class Free Trial!
+            </div>
+            <div class="select-button">
+                Select Class
+            </div>
+        </div>
+    </nav>
+
+    <!--after the user clicks on private-->
+
+    <section id="booking-form" class="container">
+
+        <div id="scroll-down">
+            <i class="fa-solid fa-arrow-down"></i><br>
+            Scroll down to book your class
+        </div>
+        <div class="booking-card">
+            <div class="booking-txts">
+                <h1 style="font-family: sans-serif;">Schedule Your <span class="red" style="color: #e53e3e;">Private Class</span></h1>
+                <p class="description">Your first class is a <span style="color:#42b34b;">FREE trial</span>. Let's find a time that works for you!</p>
+            </div>
+
+            <!--this art are forms. idk if youll use form tag for this or do what-->
+            <form>
+            <div class="form-input">
+                <label >Your HSK Level</label>
+                <select class="hsk-select" id="hsk-level">
+                    <option value="">Select HSK Level</option>
+                    <option value="HSK 1">HSK 1</option>
+                    <option value="HSK 2">HSK 2</option>
+                    <option value="HSK 3">HSK 3</option>
+                    <option value="HSK 4">HSK 4</option>
+                    <option value="HSK 5">HSK 5</option>
+                    <option value="HSK 6">HSK 6</option>
+                    <option value="Beginner (No HSK)">Beginner (No HSK)</option>
+                </select>
+        </div>
+
+        <div class="form-input">
+            <label>Preferred Date</label>
+            <input type="date" class="date-select" id="class-date">
+        </div>
+
+        <div class="form-input">
+            <label>Select Time Period</label>
+            <div class="time-select">
+                <div class="time-option" data-time="morning">
+                    <div class="time-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+                    <div class="time-label">Morning</div>
+                </div>
+                <div class="time-option" data-time="day">
+                    <div class="time-icon"><i class="fa-solid fa-sun"></i></div>
+                    <div class="time-label">Day</div>
+                </div>
+                <div class="time-option" data-time="evening">
+                    <div class="time-icon"><i class="fa-solid fa-moon"></i></div>
+                    <div class="time-label">Evening</div>
+                </div>
+            </div>
+        </div>
+<!--this part below should be hidden until the user clicks any one of those times-->
+        <div class="form-input" id="morning-times">
+            <label>Available Morning Times</label>
+            <div class="specific-times">
+                <button class="time-btn" data-specific-time="7:00">7:00</button>
+                <button class="time-btn" data-specific-time="7:30">7:30</button>
+                <button class="time-btn" data-specific-time="8:00">8:00</button>
+                <button class="time-btn" data-specific-time="8:30">8:30</button>
+                <button class="time-btn" data-specific-time="9:00">9:00</button>
+                <button class="time-btn" data-specific-time="9:30">9:30</button>
+                <button class="time-btn" data-specific-time="10:00">10:00</button>
+                <button class="time-btn" data-specific-time="10:30">10:30</button>
+                <button class="time-btn" data-specific-time="11:00">11:00</button>
+                <button class="time-btn" data-specific-time="11:30">11:30</button>
+            </div>
+        </div>
+
+        <div class="form-input" id="day-times">
+            <label>Available Day Times</label>
+            <div class="specific-times">
+                <button class="time-btn" data-specific-time="12:00">12:00</button>
+                <button class="time-btn" data-specific-time="12:30">12:30</button>
+                <button class="time-btn" data-specific-time="13:00">13:00</button>
+                <button class="time-btn" data-specific-time="13:30">13:30</button>
+                <button class="time-btn" data-specific-time="14:00">14:00</button>
+                <button class="time-btn" data-specific-time="14:30">14:30</button>
+                <button class="time-btn" data-specific-time="15:00">15:00</button>
+                <button class="time-btn" data-specific-time="15:30">15:30</button>
+                <button class="time-btn" data-specific-time="16:00">16:00</button>
+                <button class="time-btn" data-specific-time="16:30">16:30</button>
+            </div>
+        </div>
+
+        <div class="form-input" id="evening-times">
+            <label>Available Evening Times</label>
+            <div class="specific-times">
+                <button class="time-btn" data-specific-time="17:00">17:00</button>
+                <button class="time-btn" data-specific-time="17:30">17:30</button>
+                <button class="time-btn" data-specific-time="18:00">18:00</button>
+                <button class="time-btn" data-specific-time="18:30">18:30</button>
+                <button class="time-btn" data-specific-time="19:00">19:00</button>
+                <button class="time-btn" data-specific-time="19:30">19:30</button>
+                <button class="time-btn" data-specific-time="20:00">20:00</button>
+                <button class="time-btn" data-specific-time="21:30">21:30</button>
+                <button class="time-btn" data-specific-time="22:00">22:00</button>
+                <button class="time-btn" data-specific-time="22:30">22:30</button>
+            </div>
+        </div>
+
+        <button class="book-btn">Book Free Trial Class</button>
+        </form>
+    </div>
+</div>
+</section>
+
+<!-- Confirmation Page paxi auna paro after clickinh book-->
+<div id="confirmation" class="container hidden">
+    <div class="success-box">
+            <div class="success-icon">
+                <div class="success-tick"><i class="fa-regular fa-circle-check"></i></div>
+            </div>
+            <h1 id="success-head-txt">Booking Confirmed!</h1>
+            <p class="success-description">We've received your booking and your first class is a free trial! You'll receive an email with the Zoom link and further details about the class and teacher.</p>
+            <p class="success-any">If you have any questions, please contact our support team.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="footer-logo">
+                    <div class="footer-logo-icon">中</div>
+                    Chinese Laoshi
+                </a>
+                <p class="footer-description">
+                    Your trusted partner in learning Chinese. From HSK preparation to fluent conversation, we're here to guide your journey to mastering Mandarin.
+                </p>
+                <div class="social-media">
+                    <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Learning</h3>
+                <ul class="footer-links">
+                    <li><a href="character.html">HSK Vocabulary</a></li>
+                    <li><a href="/pages/lesson.html">Online Classes</a></li>
+                    <li><a href="/pages/quiz.html">Level Test</a></li>
+                    <li><a href="books.html">Study Materials</a></li>
+                 </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul class="footer-links">
+                    <li><a href="/pages/about.html">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            </div>
+            <p class="footer-ending">
+                &copy; 2025 Chinese Laoshi. All rights reserved.
+                Made with love for Chinese learners worldwide.
+            </p>
+    </footer>
+</body>
+</html>
