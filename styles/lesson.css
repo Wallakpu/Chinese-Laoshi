@@ -172,6 +172,10 @@ body{
             }
  }
 
+ .booking-form{
+    display:none;
+ }
+
  #scroll-down{
     text-align: center;
     color: var(--theme-clr);
