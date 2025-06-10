@@ -1,3 +1,8 @@
+:root{
+    --black-clr: #333;
+    --theme-clr: #e53e3e;
+    --select-clr:#d53030;
+}
 
 .hero {
    background: linear-gradient(135deg, #f8e6e6, #ffffff);
