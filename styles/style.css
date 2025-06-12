@@ -89,7 +89,7 @@
 .btn-two {
     background-color: white;
     color:var(--theme-clr);
-    border: 2px solid #e53e3e;
+    border: 2px solid var(--theme-clr);
     padding: 0.45rem 3rem;
     border-radius: 8px;
     text-decoration: none;

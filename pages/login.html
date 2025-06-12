@@ -4,39 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="../styles/login.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     
     <div class="container">
-        <div class="heading">
-            <h1>Login Form</h1>
-    </div>
-        <div class="input-type">
-            <input type="text" placeholder="Username" required><i class='bx bxs-user'></i>
+        <div class="logo">
+            <div class="logo-icon">中</div>
         </div>
+        <div class="heading">
+            <h2>Welcome Back!</h2>
+        </div>
+
+        <p> Sign in to continue your chinese learning journey</p>
         <div class="input-type">
-            <input type="password" id="password" placeholder="Password" required><i class='bx bx-lock'></i>
+            <input type="text" placeholder="Full Name" required><i class='bx bxs-user'></i>
         </div>
         <div class="input-type" >
             <input type="email" name="Email"  id="email" placeholder="Email" required>
         </div>
+        <div class="input-type">
+            <input type="password" id="password" placeholder="Password" required><i class='bx bx-lock'></i>
+        </div>
+        
+        <div class="input-type">
+            <input type="password" id="password" placeholder="Confirm password" required><i class='bx bx-lock'></i>
+        </div>
+    
+    
         <div class="checkbox">
             <label>
-                <input type="checkbox">Remember me
+                <input type="checkbox"> Remember me
             </label>
             <a href="#">Forget password?</a>
         </div>
         <div class="submit">
-            <button style="color: black;" onclick="displayweb()">Sign Up</button>
+            <button onclick="displayweb()">Create Account</button>
         </div>
+
         <div class="account">
-         <p>Don't have an account?
-         <a href="#">Register</a></p>
+            <p>Already have an account?
+            <a href="#">Sign in</a></p>
+        </div>
 
     </div>
-    <script src="project.js">
+    <script src="../script/login.js">
 
     </script>
     
