@@ -3,12 +3,116 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+   
 }
+:root{
+    --black-clr: #333;
+    --theme-clr: #e53e3e;
+    --select-clr:#d53030;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--black-clr);
+    background: linear-gradient(135deg,#f8e6e6,#ffffff);
+}
+
+.header {
+    background-color: white;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(230, 198, 140, 0.9);
+    box-shadow: 0 1px 10px rgba(237, 185, 136, 0.1);
+}
+
+.nav-container{
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e53e3e;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: #e53e3e;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color:#666;
+    font-weight: 500;
+    padding: 7px 7px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #cc5353;
+    background-color: #fee2e2;
+    border-radius: 8px;
+    padding: 7px 7px;
+}
+
+.nav-links .login-btn {
+    background-color: var(--theme-clr);
+    color: rgb(255, 255, 255); 
+    border-radius: 8px;
+    padding: 7px 25px ; 
+    text-decoration: none;
+    font-weight: 400 ;
+    box-shadow: 0 1px 4px #d53030;
+}
+
+.nav-links .login-btn:hover {
+    background: var(--select-clr);
+    color: white; 
+    padding: 7px 25px ; 
+}
+
+
+
+
+
+
+
+
 
 .container1 {
     margin-top: 10rem;
@@ -18,7 +122,7 @@ body {
     display: inline-block;
     justify-content: center;
     align-items: center;
-    margin-left: 300px;
+    margin-left: 430px;
     height: 400px;
 
     
@@ -31,6 +135,7 @@ body {
 }
 #heading , #heading2 ,#para1{
     padding: 3px;
+  
 }
 #story {  
 
@@ -59,7 +164,26 @@ body {
     margin-left: 7rem;
 
     
+
+
 }
+
+.mission{
+    display: flex;
+    background-color: rgb(252, 252, 152);
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+
+    border-radius: 10px;
+   height: 20px;
+  border: none;
+  border-radius: 7px;  
+  padding: 10px;
+    color: rgb(255, 106, 0);
+}
+
+
 .icons .icon-text {
   display: flex;
   align-items: center;    
@@ -102,34 +226,183 @@ body {
     color:rgb(92, 17, 163)
     
 }
-
-/*here is css for teacher flex */
-.teachers {
-    display:flex;
-    gap: 30px;
+.teacher1 {
+    height: 300px;
+    width: 200px;
+       background-color: white;
+    display: flex;
+    flex-direction:column;
     justify-content: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+       padding: 10px;
+           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    
+}
+.img{
+   width: 100px;        
+  height: 100px;      
+  object-fit: cover;   
+  border-radius: 50%;
+  margin-bottom: 40px;
+}
+.teacher2 {
+    height: 300px;
+    width: 200px;
+    display: flex;
+       background-color: white;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+     padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.teacher-card {
-    background-color: white;
+.teacher3 {
+    height: 300px;
+    width: 200px;
+     background-color: white;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    border: none;
     border-radius: 10px;
-    padding: 30px 20px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    flex:1;
+    padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    
+}
+
+
+.teachers-img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 60px;
+    
+
+}
+.teacher-position{
+    color:red;
+    font-size: medium;
+    margin-bottom: 7px;
+    margin-top: 5px;
 }
 
 .container4{
-margin-top: 100px;
+    margin-top: 300px;
+  
     display: inline-block;
-    width: 50%;
-    margin-left: 7rem;
+    align-items: center;
+    justify-content: center;
+    margin-left: 500px;
+
+}
+.values{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6rem;
+    background-color: rgb(128, 234, 220);
+    width: fit-content;
+    padding: 7px 8px;
+    border: none;
+    border-radius: 10px;
+    color:rgb(33, 66, 61)
+}
+.container4 h1{
+    margin-top: 15px;
+
+
+}
+.main-container{
+    
+    margin-top: 40px;
+    height: 300px;
+    display: flex;
+    gap: 30px;
+
+  
+}
+.education{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    margin-left: 110px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+  
 }
 
+.img2{
+      width: 60px;        
+  height: 60px;      
+  object-fit: cover;   
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.education p{
+    margin-top: 10px;
+    font-size: medium;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+
+}
+.Success{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    padding: 20px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    width: fit-content;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 
 
+}
 
+.Success p{
+    margin-top: 10px;
+    font-size: medium;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
 
+}
+.Cultural-bridge{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    padding: 20px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    width: fit-content;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+    
+}
+.Cultural-bridge p{
+    margin-top: 10px;
+    font-size: medium;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+
+}
