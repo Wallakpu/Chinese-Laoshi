@@ -11,8 +11,6 @@ const container=document.querySelector('.container');
 const selectclass1=document.querySelector('.select-button1');
 const selectclass2=document.querySelector('.select-button2');
 
-
-
 const timePeriod=()=>{
 morning.addEventListener("click",()=>{
      document.getElementById("morning-times").style.display = 'block';
@@ -37,7 +35,7 @@ const button = () => {
       });
 
       // to highlight the clicked button
-      btn.style.backgroundColor = "blue";
+      btn.style.backgroundColor = "#d53030";
       btn.style.color = "white";
     });
   });

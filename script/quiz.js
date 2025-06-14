@@ -68,8 +68,8 @@ const nextQn = () => {
             }
         } else {
            dialoge.showModal();// DIsplayes the modal that shows scoresmsg
+scoreMsg.innerHTML = `You scored ${score}/${QuizQn.length}<br>Congratulations!!<br>You have passed the HSK 1 level test!!<br>Continue for HSK 2!`;
 
-    scoreMsg.textContent = `You scored ${score}/${QuizQn.length}`;
     nextBtn.disabled = true;  
         
         }
