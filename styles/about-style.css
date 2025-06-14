@@ -1,4 +1,11 @@
 /*about.html styles*/
+
+:root{
+    --black-clr: #333;
+    --theme-clr: #e53e3e;
+    --select-clr:#d53030;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,128 +13,36 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    
 }
-:root{
-    --black-clr: #333;
-    --theme-clr: #e53e3e;
-    --select-clr:#d53030;
-}
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--black-clr);
-    background: linear-gradient(135deg,#f8e6e6,#ffffff);
-}
-
-.header {
-    background-color: white;
-    padding: 1rem 0;
-    position: fixed;
-    top: 0;
-    left:0;
-    right:0;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(230, 198, 140, 0.9);
-    box-shadow: 0 1px 10px rgba(237, 185, 136, 0.1);
-}
-
-.nav-container{
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-    
-}
-
-.logo {
-    display: flex;
+.story-badge {
+    background-color:rgb(254, 194, 214);
+    color:rgb(244, 66, 125);
+    font-size: 0.9rem;
+    font-weight: 650;
+    display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #e53e3e;
+    border: 0.2px solid var(--theme-clr);
+    border-radius: 20px;
+    padding: 0px 8px;
+    margin-bottom: 0.75rem;
 }
 
-.logo-icon {
-    width: 40px;
-    height: 40px;
-    background: #e53e3e;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.2rem;
+.heading {
+   padding: 160px 0 0;
+   text-align: center;
 }
-
-.nav-links{
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    align-items: center;
-}
-
-.nav-links a{
-    text-decoration: none;
-    color:#666;
-    font-weight: 500;
-    padding: 7px 7px;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #cc5353;
-    background-color: #fee2e2;
-    border-radius: 8px;
-    padding: 7px 7px;
-}
-
-.nav-links .login-btn {
-    background-color: var(--theme-clr);
-    color: rgb(255, 255, 255); 
-    border-radius: 8px;
-    padding: 7px 25px ; 
-    text-decoration: none;
-    font-weight: 400 ;
-    box-shadow: 0 1px 4px #d53030;
-}
-
-.nav-links .login-btn:hover {
-    background: var(--select-clr);
-    color: white; 
-    padding: 7px 25px ; 
-}
-
-
-
-
-
-
-
-
 
 .container1 {
-    margin-top: 10rem;
-     height: 100vh;
-     text-align: center;
- 
-    display: inline-block;
-    justify-content: center;
+   max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    gap: 4rem;
     align-items: center;
-    margin-left: 430px;
-    height: 400px;
-
-    
-
+    text-align: center;
 }
+
 #heading2{
     color: red;
     font-size: 2.5rem;
@@ -167,6 +82,21 @@ body{
 
 
 }
+
+.mission-badge {
+    background-color:rgb(255, 249, 171);
+    color:rgb(184, 111, 1);
+    font-size: 0.9rem;
+    font-weight: 650;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 0.2px solid rgb(200, 131, 29) ;
+    border-radius: 20px;
+    padding: 0px 8px;
+    margin-bottom: 0.75rem;
+}
+
 
 .mission{
     display: flex;
@@ -213,87 +143,83 @@ body{
     margin-left: 500px;
 
 }
-.team{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 9rem;
-    background-color: rgb(206, 161, 247);
-    width: fit-content;
-    padding: 5px;
-    border: none;
-    border-radius: 10px;
-    color:rgb(92, 17, 163)
-    
-}
-.teacher1 {
-    height: 300px;
-    width: 200px;
-       background-color: white;
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 10px;
-       padding: 10px;
-           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-    
-}
-.img{
-   width: 100px;        
-  height: 100px;      
-  object-fit: cover;   
-  border-radius: 50%;
-  margin-bottom: 40px;
-}
-.teacher2 {
-    height: 300px;
-    width: 200px;
-    display: flex;
-       background-color: white;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 10px;
-     padding: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.mid {
+   padding: 160px 0 0;
+   text-align: center;
 }
 
-.teacher3 {
-    height: 300px;
-    width: 200px;
-     background-color: white;
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
+.container3{
+     max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    gap: 4rem;
     align-items: center;
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    
+    text-align: center;
+}
+
+.team-badge {
+    background-color:rgb(249, 180, 249);
+    color:purple;
+    font-size: 0.9rem;
+    font-weight: 650;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 0.2px solid purple ;
+    border-radius: 20px;
+    padding: 0px 8px;
+    margin-bottom: 0.75rem;
 }
 
 
-.teachers-img{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 60px;
-    
+.team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin: 10px 4rem;
+            padding: 4rem;
+        }
 
-}
-.teacher-position{
-    color:red;
-    font-size: medium;
-    margin-bottom: 7px;
-    margin-top: 5px;
-}
+        .team-avatar img{
+            width: 100%;
+            align-items: center;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-info {
+            padding: 30px 25px;
+            text-align: center;
+        }
+
+        .team-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1f2937;
+        }
+
+        .team-role {
+            color: #ef4444;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .team-description {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
 
 .container4{
     margin-top: 300px;
@@ -304,6 +230,22 @@ body{
     margin-left: 500px;
 
 }
+
+.value-badge {
+    background-color:rgb(175, 238, 175);
+    color:green;
+    font-size: 0.9rem;
+    font-weight: 650;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 0.2px solid green ;
+    border-radius: 20px;
+    padding: 0px 8px;
+    margin-bottom: 0.75rem;
+}
+
+
 .values{
     display: flex;
     justify-content: center;
@@ -316,14 +258,24 @@ body{
     border-radius: 10px;
     color:rgb(33, 66, 61)
 }
-.container4 h1{
-    margin-top: 15px;
 
-
+.last{
+    padding: 160px 0 0;
+   text-align: center;
 }
+
+.container4 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    gap: 4rem;
+    align-items: center;
+    text-align: center;
+}
+
 .main-container{
-    
-    margin-top: 40px;
+    margin: 40px 4rem;
+    padding: 40px;
     height: 300px;
     display: flex;
     gap: 30px;
@@ -340,7 +292,6 @@ body{
     width: fit-content;
     height: fit-content;
     padding: 20px;
-    margin-left: 110px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 
   
