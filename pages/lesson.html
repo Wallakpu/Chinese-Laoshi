@@ -66,9 +66,9 @@
             <div class="free-trial">
                 <i class="fa-solid fa-gift"></i> First Class Free Trial!
             </div>
-            <div class="select-button">
+            <button class="select-button1">
                 Select Class
-            </div>
+            </button>
         </div>
         <div class="class-box">
             <div class="card-icon"><i class="fa-solid fa-user-group"></i></div>
@@ -86,9 +86,9 @@
             <div class="free-trial">
                 <i class="fa-solid fa-gift"></i> First Class Free Trial!
             </div>
-            <div class="select-button">
+            <button class="select-button2">
                 Select Class
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -100,11 +100,13 @@
             <i class="fa-solid fa-arrow-down"></i><br>
             Scroll down to book your class
         </div>
-        <div class="booking-card">
+        <div class="booking-card1"> <!--this is private booking card-->
             <div class="booking-txts">
-                <h1 style="font-family: sans-serif;">Schedule Your <span class="red" style="color: #e53e3e;">Private Class</span></h1>
+                <h1 id="class-type" style="font-family: sans-serif;">Schedule Your <span class="red" style="color: #e53e3e;">Private Class</span></h1>
                 <p class="description">Your first class is a <span style="color:#42b34b;">FREE trial</span>. Let's find a time that works for you!</p>
             </div>
+
+
 
             <!--this art are forms. idk if youll use form tag for this or do what-->
             <form>
@@ -132,83 +134,85 @@
             <div class="time-select">
                 <div class="time-option" data-time="morning">
                     <div class="time-icon"><i class="fa-solid fa-cloud-sun"></i></div>
-                    <div class="time-label">Morning</div>
+                    <div class="time-label" id="morning">Morning</div>
                 </div>
                 <div class="time-option" data-time="day">
                     <div class="time-icon"><i class="fa-solid fa-sun"></i></div>
-                    <div class="time-label">Day</div>
+                    <div class="time-label" id="day">Day</div>
                 </div>
                 <div class="time-option" data-time="evening">
                     <div class="time-icon"><i class="fa-solid fa-moon"></i></div>
-                    <div class="time-label">Evening</div>
+                    <div class="time-label" id="evening">Evening</div>
                 </div>
             </div>
         </div>
 <!--this part below should be hidden until the user clicks any one of those times-->
-        <div class="form-input" id="morning-times">
+        <div class="form-inputs" id="morning-times">
             <label>Available Morning Times</label>
             <div class="specific-times">
-                <button class="time-btn" data-specific-time="7:00">7:00</button>
-                <button class="time-btn" data-specific-time="7:30">7:30</button>
-                <button class="time-btn" data-specific-time="8:00">8:00</button>
-                <button class="time-btn" data-specific-time="8:30">8:30</button>
-                <button class="time-btn" data-specific-time="9:00">9:00</button>
-                <button class="time-btn" data-specific-time="9:30">9:30</button>
-                <button class="time-btn" data-specific-time="10:00">10:00</button>
-                <button class="time-btn" data-specific-time="10:30">10:30</button>
-                <button class="time-btn" data-specific-time="11:00">11:00</button>
-                <button class="time-btn" data-specific-time="11:30">11:30</button>
+                <button type="button" class="time-btn" data-specific-time="7:00">7:00</button><!--We have given the type to button so that it doesnt act as any other tags-->
+                <button  type="button" class="time-btn" data-specific-time="7:30">7:30</button> 
+                <button type="button" class="time-btn" data-specific-time="8:00">8:00</button>
+                <button type="button" class="time-btn" data-specific-time="8:30">8:30</button>
+                <button type="button" class="time-btn" data-specific-time="9:00">9:00</button>
+                <button type="button" class="time-btn" data-specific-time="9:30">9:30</button>
+                <button type="button" class="time-btn" data-specific-time="10:00">10:00</button>
+                <button type="button" class="time-btn" data-specific-time="10:30">10:30</button>
+                <button type="button" class="time-btn" data-specific-time="11:00">11:00</button>
+                <button type="button" class="time-btn" data-specific-time="11:30">11:30</button>
             </div>
         </div>
 
         <div class="form-input" id="day-times">
             <label>Available Day Times</label>
             <div class="specific-times">
-                <button class="time-btn" data-specific-time="12:00">12:00</button>
-                <button class="time-btn" data-specific-time="12:30">12:30</button>
-                <button class="time-btn" data-specific-time="13:00">13:00</button>
-                <button class="time-btn" data-specific-time="13:30">13:30</button>
-                <button class="time-btn" data-specific-time="14:00">14:00</button>
-                <button class="time-btn" data-specific-time="14:30">14:30</button>
-                <button class="time-btn" data-specific-time="15:00">15:00</button>
-                <button class="time-btn" data-specific-time="15:30">15:30</button>
-                <button class="time-btn" data-specific-time="16:00">16:00</button>
-                <button class="time-btn" data-specific-time="16:30">16:30</button>
+                <button type="button" class="time-btn" data-specific-time="12:00">12:00</button>
+                <button type="button" class="time-btn" data-specific-time="12:30">12:30</button>
+                <button type="button" class="time-btn" data-specific-time="13:00">13:00</button>
+                <button type="button" class="time-btn" data-specific-time="13:30">13:30</button>
+                <button type="button" class="time-btn" data-specific-time="14:00">14:00</button>
+                <button type="button" class="time-btn" data-specific-time="14:30">14:30</button>
+                <button type="button"  class="time-btn" data-specific-time="15:00">15:00</button>
+                <button type="button" class="time-btn" data-specific-time="15:30">15:30</button>
+                <button type="button" class="time-btn" data-specific-time="16:00">16:00</button>
+                <button type="button" class="time-btn" data-specific-time="16:30">16:30</button>
             </div>
         </div>
 
         <div class="form-input" id="evening-times">
             <label>Available Evening Times</label>
             <div class="specific-times">
-                <button class="time-btn" data-specific-time="17:00">17:00</button>
-                <button class="time-btn" data-specific-time="17:30">17:30</button>
-                <button class="time-btn" data-specific-time="18:00">18:00</button>
-                <button class="time-btn" data-specific-time="18:30">18:30</button>
-                <button class="time-btn" data-specific-time="19:00">19:00</button>
-                <button class="time-btn" data-specific-time="19:30">19:30</button>
-                <button class="time-btn" data-specific-time="20:00">20:00</button>
-                <button class="time-btn" data-specific-time="21:30">21:30</button>
-                <button class="time-btn" data-specific-time="22:00">22:00</button>
-                <button class="time-btn" data-specific-time="22:30">22:30</button>
+                <button type="button" class="time-btn" data-specific-time="17:00">17:00</button>
+                <button type="button" class="time-btn" data-specific-time="17:30">17:30</button>
+                <button type="button" class="time-btn" data-specific-time="18:00">18:00</button>
+                <button type="button" class="time-btn" data-specific-time="18:30">18:30</button>
+                <button type="button" class="time-btn" data-specific-time="19:00">19:00</button>
+                <button type="button" class="time-btn" data-specific-time="19:30">19:30</button>
+                <button type="button" class="time-btn" data-specific-time="20:00">20:00</button>
+                <button type="button" class="time-btn" data-specific-time="21:30">21:30</button>
+                <button type="button" class="time-btn" data-specific-time="22:00">22:00</button>
+                <button type="button" class="time-btn" data-specific-time="22:30">22:30</button>
             </div>
         </div>
 
-        <button class="book-btn">Book Free Trial Class</button>
+        <button type="button" class="book-btn">Book Free Trial Class</button>
         </form>
     </div>
 </div>
 </section>
 
+
 <!-- Confirmation Page paxi auna paro after clickinh book-->
 <div id="confirmation" class="container hidden">
-    <div class="success-box">
+    <dialog class="success-box">
             <div class="success-icon">
                 <div class="success-tick"><i class="fa-regular fa-circle-check"></i></div>
             </div>
             <h1 id="success-head-txt">Booking Confirmed!</h1>
             <p class="success-description">We've received your booking and your first class is a free trial! You'll receive an email with the Zoom link and further details about the class and teacher.</p>
             <p class="success-any">If you have any questions, please contact our support team.</p>
-        </div>
+            <button type="button" class="close-btn" onclick="closebtn()">Okay</button>
+    </dialog>
     </div>
 
     <footer>
@@ -262,5 +266,6 @@
                 Made with love for Chinese learners worldwide.
             </p>
     </footer>
+    <script src="../script/time.js"></script>
 </body>
 </html>
