@@ -195,8 +195,6 @@ body{
 
  .container{
     display: none;
-    
-
  }
 
  .booking-card{
@@ -336,16 +334,31 @@ body{
     min-height: 80vh;
 }
 
+
 .success-box {
-    background:#f0fdf4;
+    background: #f0fdf4;
     border-radius: 20px;
     padding: 60px 40px;
     text-align: center;
     box-shadow: 0 19px 30px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    margin: 0 10rem 2rem 10rem;
-    position: relative;
+    width: 60vw;
+    max-width: 600px;
+    margin: auto;
+    position: fixed;
+    top: calc(80px + 10vh); /* moves it below navbar */
+    left: 50%;
+    transform: translateX(-60%);
     overflow: hidden;
+    border: none;
+    z-index: 2000; /* above navbar */
+}
+
+/* blurred backdrop */
+::backdrop {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    top: 73px;
 }
 
 .success-icon {
@@ -371,37 +384,6 @@ body{
 #morning-times, #day-times, #evening-times{
     display: none;
 }
-
-.success-box {
-    background: #f0fdf4;
-    border-radius: 20px;
-    padding: 60px 40px;
-    text-align: center;
-    box-shadow: 0 19px 30px rgba(0, 0, 0, 0.1);
-    width: 60vw;
-    max-width: 600px;
-    margin: auto;
-    position: fixed;
-    top: calc(80px + 10vh); /* moves it below navbar */
-    left: 50%;
-    transform: translateX(-60%);
-    overflow: hidden;
-    border: none;
-    z-index: 2000; /* above navbar */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* blurred backdrop */
-::backdrop {
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    top: 73px;
-}
-
 
 .time-btn.selected {
   background-color:#d53030;
@@ -430,7 +412,6 @@ body{
 .close-btn:hover{
     border-color: var(--theme-clr);
     background-color: var(--select-clr);
-
     transform: translateY(1px);
     box-shadow: 0 4px 12px rgba(229, 62, 62, 0.15);
 }

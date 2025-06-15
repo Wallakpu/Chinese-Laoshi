@@ -8,6 +8,6 @@ const displayweb =() => {
         alert("Incorrect email! Please try again");
     }
     else {
-        window.location.href="about.html";
+        window.location.href="/index.html";
     }
 }
