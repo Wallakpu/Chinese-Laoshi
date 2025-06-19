@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSK Characters</title>
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/character.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referreferrer="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">中</div>
+                <a href="/index.html" style="text-decoration: none;">
+                Chinese Laoshi
+                </a>
+            </div>
+            <div class="nav-links" id="navMenu">
+                <li><a href="../pages/character.html">HSK Characters</a></li>
+                <li><a href="../pages/lesson.html">Online Classes</a></li>
+                <li><a href="../pages/quiz.html">Level Test</a></li>
+                <li><a href="pricing.html">Premium</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="../pages/about.html">About Us</a></li>
+                <li><a href="../login.html" class="login-btn"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login</a></li>  
+            </div>  
+        </div>
+    </header>
+
+    <section class="heading">
+        <div class="heading-container">
+            <div class="heading-contentS fade-in"></div>
+            <div class="badge"><i class="fa-solid fa-user-group"></i>Interactive Learning</div>
+            <h1 class="title">Learn Chinese Characters</h1>
+            <p class="description">Master essential Chinese characters for each HSK level. Premium members get<br>access to HSK 5-6 content.</p>
+        </div>
+            
+        <div class="login-notice">
+            Please Sign up or Log in to track your progress
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="hsk-levels">
+            <div class="hsk-level active" data-level="1">
+                <div class="level-title">HSK 1</div>
+                <div class="level-count">150 Characters</div>
+            </div>
+            <div class="hsk-level" data-level="2">
+                <div class="level-title">HSK 2</div>
+                <div class="level-count">300 Characters</div>
+            </div>
+            <div class="hsk-level" data-level="3">
+                <div class="level-title">HSK 3</div>
+                <div class="level-count">300 Characters</div>
+            </div>
+            <div class="hsk-level" data-level="4">
+                <div class="level-title">HSK 4</div>
+                <div class="level-count"><i class="fa-solid fa-lock"></i> Premium</div>
+            </div>
+            <div class="hsk-level" data-level="5">
+                <div class="level-title">HSK 5</div>
+                <div class="level-count"><i class="fa-solid fa-lock"></i> Premium</div>
+            </div>
+            <div class="hsk-level" data-level="6">
+                <div class="level-title">HSK 6</div>
+                <div class="level-count"><i class="fa-solid fa-lock"></i> Premium</div>
+            </div>
+        </div>
+
+        <div class="characters-grid" id="charactersGrid">
+            <!-- Characters will be populated by JavaScript -->
+        </div>
+
+        <div class="premium-section">
+            <div class="crown-icon"><i class="fa-solid fa-crown"></i></div>
+            <h2 class="premium-title">Unlock All HSK Levels</h2>
+            <p class="premium-subtitle">Get access to HSK 5-6 characters and premium features</p>
+            <a href="../pages/premium.html" class="upgrade-btn">✨ Upgrade to Premium</a>
+        </div>
+    </div>
+
+    <script src="../script/character.js"></script>
+ 
+    <!--footer section-->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="footer-logo">
+                    <div class="footer-logo-icon">中</div>
+                    Chinese Laoshi
+                </a>
+                <p class="footer-description">
+                    Your trusted partner in learning Chinese. From HSK preparation to fluent conversation, we're here to guide your journey to mastering Mandarin.
+                </p>
+                <div class="social-media">
+                    <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Learning</h3>
+                <ul class="footer-links">
+                    <li><a href="character.html">HSK Vocabulary</a></li>
+                    <li><a href="./pages/lesson.html">Online Classes</a></li>
+                    <li><a href="./pages/quiz.html">Level Test</a></li>
+                    <li><a href="books.html">Study Materials</a></li>
+                 </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul class="footer-links">
+                    <li><a href="./pages/about.html">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-ending">
+            &copy; 2025 Chinese Laoshi. All rights reserved.
+            Made with love for Chinese learners worldwide.
+        </p>
+    </footer>
+</body>
+</html>
