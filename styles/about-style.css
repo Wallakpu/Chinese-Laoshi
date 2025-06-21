@@ -10,14 +10,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   
 }
 
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #333;
+    background: 
+        linear-gradient(45deg, #fceff0 25%, transparent 25%),
+        linear-gradient(-45deg, #fceff0 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #fceff0 75%),
+        linear-gradient(-45deg, transparent 75%, #fceff0 75%);
+    background-size: 50px 70px;
+    background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+}
+
+/*1st section*/
 
 .story-badge {
-    background-color:rgb(254, 194, 214);
-    color:rgb(244, 66, 125);
+    background-color:#fecaca;
+    color:#ce555b;
     font-size: 0.9rem;
     font-weight: 650;
     display: inline-flex;
@@ -34,7 +45,7 @@
    text-align: center;
 }
 
-.container1 {
+.heading-container {
    max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
@@ -43,49 +54,36 @@
     text-align: center;
 }
 
-#heading2{
+#heading-title{
+    font-size: 3rem;
+}
+
+span{
     color: red;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    margin-bottom: 8px;
 
 }
-#heading , #heading2 ,#para1{
-    padding: 3px;
-  
-}
-#story {  
 
-  display: flex;
-  align-items: center;       
-  justify-content: center; 
-  gap: 8px;                  
-  margin: 20px auto;         
-  width: fit-content;     
-  background-color: rgb(250, 174, 187);
-  height: 20px;
-  border: none;
-  border-radius: 7px;  
-  padding: 10px;
+#para1{
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6; 
 }
-#story i{
-    color: rgb(246, 79, 107);
+
+/*2nd section1*/
+
+.heading2{
+    margin-top: 4rem;
 }
-#story p{
-    color:  rgb(246, 79, 107);
-}
-.container2{
-    margin-top: 100px;
-    display: inline-block;
-    width: 50%;
-    margin-left: 7rem;
 
-    
-
-
+#para2{
+    margin-bottom: 20px;
 }
 
 .mission-badge {
-    background-color:rgb(255, 249, 171);
-    color:rgb(184, 111, 1);
+    background-color:#fdecb9;
+    color:#cb8333;
     font-size: 0.9rem;
     font-weight: 650;
     display: inline-flex;
@@ -94,25 +92,25 @@
     border: 0.2px solid rgb(200, 131, 29) ;
     border-radius: 20px;
     padding: 0px 8px;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
 }
 
-
-.mission{
-    display: flex;
-    background-color: rgb(252, 252, 152);
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-
-    border-radius: 10px;
-   height: 20px;
-  border: none;
-  border-radius: 7px;  
-  padding: 10px;
-    color: rgb(255, 106, 0);
+.heading2-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 10px 4rem;
+    padding: 4rem;
+}
+.grid1{
+    align-self: center;
 }
 
+#heading2-title {
+    font-size: 2rem;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
 
 .icons .icon-text {
   display: flex;
@@ -126,35 +124,30 @@
 }
 
 .icons i{
-    color: orange
-}
-#heading3{
-    margin-bottom: 30px;
+    color: #f5a723;
 }
 
-#para2{
-    margin-bottom: 20px;
+.grid2 img{
+    border-radius: 16px;;
 }
 
-.container3{
-    margin-top: 300px;
-    display: inline-block;
-    width: 50%;
-    margin-left: 500px;
+/*3rd section*/
 
-}
-.mid {
-   padding: 160px 0 0;
+.heading3 {
+   margin: 4rem 0 0;
    text-align: center;
 }
 
-.container3{
-     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    gap: 4rem;
-    align-items: center;
-    text-align: center;
+#heading3-title {
+    font-size: 2rem;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+#para3{
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6; 
 }
 
 .team-badge {
@@ -171,64 +164,58 @@
     margin-bottom: 0.75rem;
 }
 
-
 .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            margin: 10px 4rem;
-            padding: 4rem;
-        }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin: 10px 4rem;
+    padding: 4rem;
+}
 
-        .team-avatar img{
-            width: 100%;
-            align-items: center;
-        }
-
-        .team-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .team-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .team-info {
-            padding: 30px 25px;
-            text-align: center;
-        }
-
-        .team-name {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #1f2937;
-        }
-
-        .team-role {
-            color: #ef4444;
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-
-        .team-description {
-            color: #6b7280;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-.container4{
-    margin-top: 300px;
-  
-    display: inline-block;
+.team-avatar img{
+    width: 100%;
     align-items: center;
-    justify-content: center;
-    margin-left: 500px;
+    padding: 20px;
+    border-radius: 30px;
+}
 
+.team-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    padding-bottom: 20px;
+}
+
+.team-info {
+    padding: 30px 25px;
+    text-align: center;
+}
+
+.team-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.team-role {
+    color: #ef4444;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.team-description {
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/*4th section*/
+
+.last{
+   margin: 4rem 0 0;
+   text-align: center;
 }
 
 .value-badge {
@@ -245,98 +232,50 @@
     margin-bottom: 0.75rem;
 }
 
-
-.values{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 6rem;
-    background-color: rgb(128, 234, 220);
-    width: fit-content;
-    padding: 7px 8px;
-    border: none;
-    border-radius: 10px;
-    color:rgb(33, 66, 61)
+.heading4-title {
+    font-size: 2rem;
+    color: #1f2937;
 }
 
-.last{
-    padding: 160px 0 0;
-   text-align: center;
-}
-
-.container4 {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    gap: 4rem;
-    align-items: center;
-    text-align: center;
-}
-
-.main-container{
-    margin: 40px 4rem;
+.values-grid{
+    margin: 2rem 4rem 9rem;
     padding: 40px;
     height: 300px;
     display: flex;
-    gap: 30px;  
+    gap: 2rem;  
 }
 
-.education{
+.value-box{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: antiquewhite;
+    background-color: white;
     border-radius: 10px;
     width: fit-content;
     height: fit-content;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 30;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.Success{
-     display: flex;
-    flex-direction: column;
+.card-icon{
+    width: 60px;
+    height: 60px;
+    background-color: var(--theme-clr);
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
     align-items: center;
     justify-content: center;
-    height: fit-content;
-    padding: 20px;
-    background-color: antiquewhite;
-    border-radius: 10px;
-    width: fit-content;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-
-
+    color: white;
+    font-size: 25px;
 }
 
-.Success p{
-    margin-top: 10px;
-    font-size: medium;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-
-}
-.Cultural-bridge{
-     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: fit-content;
-    padding: 20px;
-    background-color: antiquewhite;
-    border-radius: 10px;
-    width: fit-content;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-
-    
-}
-.Cultural-bridge p{
-    margin-top: 10px;
-    font-size: medium;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-
+.sub-text{
+    margin-top: 12px;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6; 
 }

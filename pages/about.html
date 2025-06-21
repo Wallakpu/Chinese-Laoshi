@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
     <link rel="stylesheet" href="../styles/about-style.css">
-    <link rel="stylesheet" href="../styles/lesson.css">
     <link rel="stylesheet" href="../styles/navbar.css">
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel= "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -25,36 +24,40 @@
                 <li><a href="../pages/character.html">HSK Characters</a></li>
                 <li><a href="../pages/lesson.html">Online Classes</a></li>
                 <li><a href="../pages/quiz.html">Level Test</a></li>
-                <li><a href="pricing.html">Premium</a></li>
-                <li><a href="books.html">Books</a></li>
+                <li><a href="../pages/premium.html">Premium</a></li>
+                <li><a href="../pages/books.html">Books</a></li>
                 <li><a href="../pages/about.html">About Us</a></li>
-                <li><a href= "../login.html" class="login-btn"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login</a></li>  
+                <li><a href= "../pages/login.html" class="login-btn"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login</a></li>  
             </div>  
        </div>
     </header>
 
 <body>
   <div class="heading">
-    <div class="container1">
+    <div class="heading-container">
+    <div class="heading-contents fade-in"></div>
         <div class="story-badge">
       <i class="fa-regular fa-heart"></i>
         <p> Our story</p>
         </div>
-    <h1 id="heading">About Chinese Laoshi</h1>
-    <h2 id="heading2">中文老师</h2>
+    <h1 id="heading-title">About Chinese Laoshi<br>
+     <span>中文老师</span></h1>
     <p id="para1">We're passionate about making Chinese language learning accessible<br>enjoyable, and effective for student worldwide.</p>
 </div>
 </div>
 
-<div class="container2">
+<section class="heading2">
+  
+<nav class="heading2-grid">
+  <div class="grid1">
     <div class="mission-badge">
       <i class="fa-solid fa-bullseye"></i>
       <p>Our Mission</p>
     </div>
-<h1 id="heading3">Empowering Global Chinese Language Learning </h1>
-<p id="para2">
-    At Chinese Laoshi,we believe that learning Chinese should be an<br>enriching journey that opens doors to new opportunities and <br>cultural understanding.
-</p>
+    <h1 id="heading2-title">Empowering Global Chinese Language Learning </h1>
+    <p id="para2">
+      At Chinese Laoshi,we believe that learning Chinese should be an<br>enriching journey that opens doors to new opportunities and <br>cultural understanding.
+    </p>
 <div class="icons">
   <div class="icon-text">
     <i class="fa-regular fa-star"></i>
@@ -72,18 +75,24 @@
     <i class="fa-regular fa-star"></i>
     <p>Supportive community of learners and teachers</p>
   </div>
-</div>
+  </div>
+  </div>
 
+  <div class ="grid2">
+    <img src="../images/about-class.jpg" alt="About Us Image" width=600px height=1000px>
 </div>
+</nav>
+</section>
 
-<div class="mid">
-<div class="container3">
+<section class="heading3">
   <div class="team-badge">
- <i class="fa-solid fa-user-group"></i>
+    <i class="fa-solid fa-user-group"></i>
     <p>Our Team</p>
   </div>
-  <h1 id="heading4">Meet Our Expert Teachers</h1>
-  <p class="para3">Our dedicated team of experienced teachers is commited to helping you <br> achieve your Chinese language goals.</p>
+
+
+  <h1 id="heading3-title">Meet Our Expert Teachers</h1>
+  <p id="para3">Our dedicated team of experienced teachers is commited to helping you <br> achieve your Chinese language goals.</p>
   </div>
 </div>
 <div class="team-grid">
@@ -116,38 +125,42 @@
         <div class="team-role">Curriculum Director</div>
         <p class="team-description">Developed comprehensive HSK study materials</p>
       </div>
-    </div>
+  </div>
 </div>
 
-<div class="last">
-<div class="container4">
-<div class="value-badge">
-  <i class="fa-regular fa-heart"></i>
-  <p >Our Values</p>
-</div>
-<h1>What We Stand For</h1>
-</div>
+<!--4th section-->
+
+<section class="last">
+<div class="heading4">
+  <div class="value-badge">
+    <i class="fa-regular fa-heart"></i>
+    <p >Our Values</p>
+  </div>
+
+  <h1 class="heading4-title">What We Stand For</h1>
 </div>
 
-<div class="main-container">
-  <div class="education">
+<div class="values-grid">
+  <div class="value-box">
     <div class="card-icon"><i class="fa-solid fa-face-smile"></i></div>
-    <h3>Quality Education</h3>
-    <p  id="para4"> We maintain the highest standards in Chinese language education through expert-crafted content and proven teaching methods.</p>
+    <h3 class="value-title">Quality Education</h3>
+    <p  class="sub-text"> We maintain the highest standards in Chinese language education through expert-crafted content and proven teaching methods.</p>
   </div>
 
-  <div class="Success">
+  <div class="value-box">
    <div class="card-icon"><i class="fa-solid fa-book-open"></i></div>
-    <h3>Student Success</h3>
-    <p  id="para4"> Your success is our success.We porvide Personalized support and guidance throughout your learning journey. </p>
+    <h3 class="value-title">Student Success</h3>
+    <p  class="sub-text"> Your success is our success.We porvide Personalized support and guidance throughout your learning journey. </p>
   </div>
 
-  <div class="Cultural-bridge">
+  <div class="value-box">
     <div class="card-icon"><i class="fa-solid fa-globe"></i></div>
-    <h3>Cultural Bridge</h3>
-    <p  id="para4">We help bridge cultural gaps by teaching not just the language,but also the rich cultural contextof Chinese.</p>
+    <h3 class="value-title">Cultural Bridge</h3>
+    <p  class="sub-text">We help bridge cultural gaps by teaching not just the language,but also the rich cultural contextof Chinese.</p>
   </div>
-</div>
+</section>
+
+
  <footer>
         <div class="footer-container">
             <div class="footer-brand">
