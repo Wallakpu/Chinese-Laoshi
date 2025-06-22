@@ -16,7 +16,7 @@ body{
         linear-gradient(-45deg, #fceff0 25%, transparent 25%),
         linear-gradient(45deg, transparent 75%, #fceff0 75%),
         linear-gradient(-45deg, transparent 75%, #fceff0 75%);
-    background-size: 80px 80px;
+    background-size: 60px 40px;
     background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
 }
 
@@ -225,6 +225,10 @@ body{
     font-size: 2rem;
     color: var(--black-clr);
     margin-bottom:8px;
+}
+
+.feature-text{
+    font-size: 1.2rem;
 }
 
 .feature-grid{
