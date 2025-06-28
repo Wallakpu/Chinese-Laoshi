@@ -17,7 +17,7 @@ body{
     height: 100vh;
     overflow: hidden;
     color: rgb(0, 0, 0);
-  background: 
+     background: 
         linear-gradient(45deg, #fceff0 25%, transparent 25%),
         linear-gradient(-45deg, #fceff0 25%, transparent 25%),
         linear-gradient(45deg, transparent 75%, #fceff0 75%),
@@ -31,7 +31,7 @@ body{
     background-color: white;
     border: 2px solid rgba(255,255,255, 0.3);
     border-radius: 10px;
-    height: 35rem;
+    height: 26rem;
     width: 23rem;
     padding: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
@@ -147,6 +147,7 @@ body{
 .account{
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 40px;
 
 }
 .checkbox input{
