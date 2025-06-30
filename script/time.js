@@ -11,6 +11,15 @@ const container=document.querySelector('.container');
 const selectclass1=document.querySelector('.select-button1');
 const selectclass2=document.querySelector('.select-button2');
 
+const hskLvlSelect=document.querySelector(".hsk-select");
+const dateSelect=document.getElementsByClassName("date-select");
+
+
+  const okayBtn=document.querySelector('.close-btn');
+
+  let selectedSpecificTime = ""; // Stores which time user selects
+
+
 const timePeriod=()=>{
 morning.addEventListener("click",()=>{
      document.getElementById("morning-times").style.display = 'block';
@@ -37,6 +46,8 @@ const button = () => {
       // to highlight the clicked button
       btn.style.backgroundColor = "#d53030";
       btn.style.color = "white";
+
+      selectedSpecificTime = btn.getAttribute("data-specific-time");
     });
   });
 };
@@ -44,20 +55,47 @@ const button = () => {
 
 const bookBotton=()=>{
     bookbtn.addEventListener("click",()=>{
-        dialoge.style.display ='block';
+      
+        const selectedLvl=hskLvlSelect.value;  
+        const selectedDate = document.getElementById("class-date").value;
+
+        if(!selectedLvl){
+        alert("Please select any of the hsk level");
+        return;
+        }
+
+        if(!selectedDate){
+          alert("Please select the date");
+          return;
+        }
+        if(!selectedSpecificTime){
+          alert("Please select the shift!");
+          return;
+        }
+          dialoge.style.display ='block'; // the dialogue box will only be visible if selectedlvl is true
         dialoge.showModal();
+        document.body.style.overflow = 'hidden'; 
+
+      
+       
+
+
     })
 }
 
 const selectClass=()=>{
   if(selectclass1){
+   
     selectclass1.addEventListener("click",()=>{
+      window.scrollBy({ top: 500, behavior: "smooth" });
         container.style.display='block';
         selectclass2.disabled=true;
     })
   }
   if(selectclass2){
     selectclass2.addEventListener("click",()=>{
+     window.scrollBy({ top: 500, behavior: "smooth" });
+
                container.style.display='block';
                 const para=document.getElementById('class-type')
                   para.innerHTML = 'Schedule Your <span class="red" style="color: #e53e3e;">Group class</span>';
@@ -70,7 +108,6 @@ const selectClass=()=>{
 }
 
 const closebtn=()=>{   //TO close the dialogue that says booking successfull
-  const okayBtn=document.querySelector('.close-btn');
   okayBtn.addEventListener("click",()=>{
     dialoge.close();
     dialoge.style.display='none';
@@ -81,4 +118,5 @@ button();
 timePeriod();
 bookBotton();
 selectClass();
+closebtn();
 
