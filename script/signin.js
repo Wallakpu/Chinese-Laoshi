@@ -25,10 +25,11 @@ const signUp=()=>{
 
     if(email==savedEmail && password==savedPassword){
         alert("Login Successfull!");
+        
 
          setTimeout(() => {
             window.location.href = "../index.html";
-        }, 1000);
+        }, 500);
     }
      
 

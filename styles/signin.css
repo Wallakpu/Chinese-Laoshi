@@ -17,25 +17,19 @@ body{
     height: 100vh;
     overflow: hidden;
     color: rgb(0, 0, 0);
-     background: 
-        linear-gradient(45deg, #fceff0 25%, transparent 25%),
-        linear-gradient(-45deg, #fceff0 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #fceff0 75%),
-        linear-gradient(-45deg, transparent 75%, #fceff0 75%);
-    background-size: 40px 30px;
-    background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+    background-image: url(../images/bg5.jpg);
+    background-size: cover;
 }
 
 .container{
-
-    background-color: white;
+    background: rgba(255, 255, 255, 0.622);
     border: 2px solid rgba(255,255,255, 0.3);
     border-radius: 10px;
-    height: 26rem;
+    height: 27.5rem;
     width: 23rem;
     padding: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(2px);
 }
 
 
@@ -129,6 +123,7 @@ body{
     margin-top: 10px;
     color:#ffffff;
     font-weight: 600;
+    margin-bottom: 10px;
 }
 
 .submit button:hover{
@@ -147,7 +142,7 @@ body{
 .account{
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 3rem;
 
 }
 .checkbox input{

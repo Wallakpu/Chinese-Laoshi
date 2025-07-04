@@ -484,29 +484,25 @@
 
 
 
-        @media (max-width: 480px) {
-            .nav-container {
-                padding: 0 1rem;
-            }
+@media (max-width: 480px) {
+    .nav-container {
+    padding: 0 1rem;
+}
 
-            .hero-container,
-            .features-container,
-            .review-container,
-            .cta-container {
-                padding: 0 1rem;
-            }
+.hero-container, .features-container, .review-container, .cta-container {
+    padding: 0 1rem;
+}
 
-            .title {
-                font-size: 2rem;
-            }
+.title {
+    font-size: 2rem;
+}
 
-            .title, .cta-title {
-                font-size: 1.8rem;
-            }
+.title, .cta-title {
+    font-size: 1.8rem;
+}
 
-            .btn-one, .btn-two,
-            .cta-btn-one, .cta-btn-two {
-                padding: 0.75rem 1.5rem;
-                font-size: 0.9rem;
-            }
-        }
+.btn-one, .btn-two, .cta-btn-one, .cta-btn-two {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    }
+}

@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz Game</title>
+
+  <!-- Style Links -->
   <link rel="stylesheet" href="../styles/quiz.css">
   <link rel="stylesheet" href="../styles/navbar.css">
   <link rel="stylesheet" href="../styles/footer.css">
@@ -11,40 +13,106 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-     <header class="header">
-        <div class="nav-container">
-            <div class="logo">
-                <div class="logo-icon">中</div>
-                <a href ="../index.html" style="text-decoration: none; color:#e53e3e;">
-                Chinese Laoshi
-                </a>
-            </div>
-            <div class ="nav-links" id="navMenu">
-                <li><a href="../pages/character.html">HSK Characters</a></li>
-                <li><a href="../pages/lesson.html">Online Classes</a></li>
-                <li><a href="../pages/quiz.html">Level Test</a></li>
-                <li><a href="../pages/premium.html">Premium</a></li>
-                <li><a href="..//pages/books.html">Books</a></li>
-                <li><a href="../pages/about.html">About Us</a></li>
-                <li><a href= "../pages/login.html" class="login-btn"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login</a></li>  
-            </div>  
-       </div>
-    </header>
-  <div class="container">
-    <h1>Quick Quiz</h1>
-    <p id="questions">What is the largest planet on the earth.</p>
-    <button class="btn">btn</button>
-    <button class="btn">btn</button>
-    <button class="btn">btn</button>
-    <button class="btn">btn</button>
-    <button id="next">Next</button>
+<header class="header">
+  <div class="nav-container">
+    <div class="logo">
+      <div class="logo-icon">中</div>
+      <a href="../index.html" style="text-decoration: none; color:#e53e3e;">
+        Chinese Laoshi
+      </a>
+    </div>
+
+    <!-- Hamburger menu icon -->
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="nav-links" id="navMenu">
+      <li><a href="../pages/character.html">HSK Characters</a></li>
+      <li><a href="../pages/lesson.html">Online Classes</a></li>
+      <li><a href="../pages/quiz.html">Level Test</a></li>
+      <li><a href="premium.html">Premium</a></li>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="../pages/about.html">About Us</a></li>
+      <li><a href="../pages/login.html" class="login-btn"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login</a></li>  
+    </div>  
   </div>
-  <dialog class="dialoge">
-    <h1 id="Quiz Completed"></h1>
-    <p id="msg">
-    </p>
-    <button id="OK" onclick="closeDialoge()">Ok</button>
-  </dialog>
+</header>
+
+
+  <section class="heading">
+    <div class="heading-container">
+      <div class="heading-contentS fade-in">
+        <div class="badge"><i class="fa-solid fa-language"></i> HSK Level Test </div>
+        <h1 class="title">Test Your Level</h1>
+        <p class="description">
+          Take this quick test to determine your HSK level and get personalized learning recommendations.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  
+  <main class="main-content">
+   <div class="quiz-container">
+    <div id="quiz-inner">
+    <div class="question-container" id="question-container">
+      <div class="question-header">
+        <span class="question-number">Question <span id="current-question">1</span> of 5</span>
+        <span class="hsk-level" id="question-level">HSK 1</span>
+      </div>
+
+      <h2 class="question-text" id="questions">Loading questions...</h2>
+
+      <div class="options">
+        <button class="btn" id="btn1"></button>
+        <button class="btn" id="btn2"></button>
+        <button class="btn" id="btn3"></button>
+        <button class="btn" id="btn4"></button>
+      </div>
+
+      <div class="progress-next">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill" style="width: 20%"></div>
+        </div>
+
+        <div class="test-actions">
+          <button class="finish-btn" id="finish"> Finish</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div> <!-- /.quiz-container -->
+
+<!-- Result Screen -->
+  <div id="result-screen" class="result-container" style="display: none;">
+    <div class="result-icon"><i class="fa-solid fa-trophy"></i></div>
+    <h2 class="result-title">Your Result</h2>
+
+    <div class="result-level" id="result-level"></div>
+    <div class="result-score" id="result-score"></div>
+
+    <div class="stars" id="result-stars">
+      <span class="star"><i class="fa-solid fa-star"></i></span>
+      <span class="star"><i class="fa-solid fa-star"></i></span>
+      <span class="star"><i class="fa-solid fa-star"></i></span>
+      <span class="star"><i class="fa-solid fa-star"></i></span>
+      <span class="star"><i class="fa-solid fa-star"></i></span>
+    </div>
+
+    <p class="result-description" id="result-description"></p>
+
+    <button class="retake-btn" onclick="restartTest()"><i class="fa-solid fa-rotate-right"></i> Take Test Again</button>
+    <button class="next-level-btn" id="next-level-btn" style="display: none;"><i class="fa-solid fa-arrow-right"></i> Move to HSK 2</button>
+  </div>
+
+  </main>
+
   <script src="../script/quiz.js"></script>
+  <script src="../script/navbar.js"></script>
+
 </body>
 </html>
