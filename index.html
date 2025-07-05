@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     
@@ -61,7 +62,29 @@
                 </div>
             </div>
             <div class="hero-image" >
-                <img src="./images/people_hero.jpg" alt="Students learning chinese together" width="500" height="auto">
+                <div class="image-slider">
+    <div class="slider-wrapper">
+        <div class="slider-item">
+            <img src="./images/people_hero.jpg" alt="Students learning Chinese together">
+        </div>
+        <div class="slider-item">
+            <img src="./images/slide2.jpg" alt="Chinese classroom">
+        </div>
+        <div class="slider-item">
+            <img src="./images/slide3.jpg" alt="Chinese books">
+        </div>
+        <div class="slider-item">
+            <img src="./images/slide4.jpg" alt="Chinese culture">
+        </div>
+    </div>
+    
+    <div class="slider-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+        <span class="dot" data-slide="3"></span>
+    </div>
+</div>
                 <div class ="nihao">你好</div>
                 <div class="heart-icon"><i class="fa-solid fa-heart"></i></div>
             </div>
