@@ -73,45 +73,6 @@ body {
     color: #856404;
 }
 
-.hsk-levels {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-    left:10px;
-    right: 10px;
-}
-
-.hsk-level {
-    padding: 10px 60px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    background: white;
-    text-decoration: none;
-    color: #666;
-    transition: all 0.3s;
-    cursor: pointer;
-    min-width: 120px;
-    text-align: center;
-}
-
-.hsk-level.active {
-    background: #e74c3c;
-    color: white;
-    border-color: #e74c3c;
-}
-
-.hsk-level:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.level-title {
-    font-weight: 600;
-    font-size: 1.1rem;
-}
-
 .level-count {
     font-size: 0.9rem;
     opacity: 0.8;
@@ -209,4 +170,69 @@ body {
 
 .hidden {
     display: none;
+}
+
+.hsk-levels {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    padding: 0 1rem; /* gives spacing on small screens */
+}
+
+.hsk-level {
+    padding: 10px 40px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    text-decoration: none;
+    color: #666;
+    transition: all 0.3s;
+    cursor: pointer;
+    min-width: 120px;
+    text-align: center;
+    flex: 1 1 150px; /* allows flexibility */
+    max-width: 200px;
+}
+
+.hsk-level.active {
+    background: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+
+.hsk-level:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.level-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* 🌟 Responsive tweaks */
+@media (max-width: 768px) {
+    .hsk-levels {
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .hsk-level {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hsk-levels {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hsk-level {
+        width: 100%;
+        max-width: 280px;
+    }
 }

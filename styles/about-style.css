@@ -279,3 +279,122 @@ span{
     color: #666;
     line-height: 1.6; 
 }
+
+@media (max-width: 1024px) {
+  .heading-container,
+  .heading2-grid,
+  .team-grid,
+  .values-grid {
+    margin: 0 2rem;
+    padding: 2rem;
+  }
+
+  .values-grid {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+
+  .value-box {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    padding: 80px 0 0;
+  }
+
+  #heading-title,
+  span {
+    font-size: 2.2rem;
+  }
+
+  #para1,
+  #para2,
+  #para3,
+  .team-description,
+  .sub-text {
+    font-size: 0.95rem;
+  }
+
+  .heading2-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .grid2 img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+
+  .team-avatar img {
+    padding: 10px;
+  }
+
+  .values-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    margin-bottom: 4rem;
+  }
+
+  .value-box {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .card-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .team-name {
+    font-size: 1.2rem;
+  }
+
+  .team-role {
+    font-size: 0.95rem;
+  }
+
+  .team-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #heading-title,
+  span {
+    font-size: 1.8rem;
+  }
+
+  .story-badge,
+  .mission-badge,
+  .team-badge,
+  .value-badge {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+  }
+
+  .value-box {
+    padding: 1.5rem;
+  }
+
+  .sub-text {
+    font-size: 0.9rem;
+  }
+
+  .team-info {
+    padding: 1.5rem;
+  }
+}

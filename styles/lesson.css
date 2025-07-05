@@ -15,8 +15,8 @@ body{
 }
 
 .heading {
-   padding: 160px 0 0;
-   text-align: center;
+    padding: 160px 0 0;
+    text-align: center;
 }
 
 .heading-container {
@@ -103,7 +103,7 @@ body{
     font-size: 2rem;
 }
 
-.class-title{
+.titles{
     font-size: 1.8rem;
     color: #2d3748;
     margin-bottom: 1rem;
@@ -129,8 +129,13 @@ body{
     text-align: left;
 }
 
+.offer{
+    margin-bottom: 0.5rem;
+}
+
 .tick{
     color: #42b34b;
+    margin-right: 0.5rem;
 }
 
 .free-trial{
@@ -147,9 +152,9 @@ body{
     border: 1px solid #c3e6cb;
 }
 
-.select-button1{
+.select-button1, .select-button2{
     width: 100%;
-    padding: 0.5rem 0.5rem;
+    padding: 0.75rem 1rem;
     background: linear-gradient(135deg, #e53e3e 0%, #db7373 100%);
     color: white;
     border: none;
@@ -160,21 +165,7 @@ body{
     transition: all 0.2s ease;
 }
 
-.select-button2{
-    width: 100%;
-    padding: 0.5rem 0.5rem;
-    background: linear-gradient(135deg, #e53e3e 0%, #db7373 100%);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-
-.select-button:hover{
+.select-button1:hover, .select-button2:hover{
     background: #c53030;
     transform: translateY(-2px);
 }
@@ -184,45 +175,48 @@ body{
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
- }
+}
 
- #scroll-down{
+/* Booking Section */
+#scroll-down{
     text-align: center;
     color: var(--theme-clr);
     font-weight: bold;
     font-size: 20px;
- }
+    margin-bottom: 2rem;
+}
 
- .container{
+.container{
     display: none;
- }
+}
 
- .booking-card{
+.booking-card{
     background-color: white;
     margin: 6rem 10rem 2rem 10rem;
     border-radius: 12px;
     padding: 3rem 7rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
- }
+}
 
- .booking-txts {
+.booking-txts {
     text-align: center;
     font-size: 25px;
- }
+    margin-bottom: 2rem;
+}
 
- .form-input{
+.form-input{
     margin-bottom: 30px;
- }
+}
 
- .form-input label {
+.form-input label {
     display: block;
     font-weight: 600;
     color: #2d3748;
     margin-bottom: 12px;
     font-size: 1rem;
- }
+}
 
- .hsk-select{
+.hsk-select, .date-select{
     width: 100%;
     padding: 13px 20px;
     border: 2px solid #e2e8f0;
@@ -232,26 +226,9 @@ body{
     color: #2d3748;
     transition: all 0.3s ease;
     cursor: pointer;
- }
+}
 
- .hsk-select:hover {
-    border-color: #e53e3e;
-    box-shadow: 0 4px 12px rgba(229, 62, 62, 0.15);
- }
-
- .date-select{
-    width: 100%;
-    padding: 13px 20px;
-    border: 2px solid #e2e8f0;
-    border-radius: 12px;
-    font-size: 1rem;
-    background: white;
-    color: #2d3748;
-    transition: all 0.3s ease;
-    cursor: pointer;
- }
-
-.date-select:hover {
+.hsk-select:hover, .date-select:hover {
     border-color: #e53e3e;
     box-shadow: 0 4px 12px rgba(229, 62, 62, 0.15);
 }
@@ -300,12 +277,23 @@ body{
     position: relative;
 }
 
-
 .time-btn:hover {
     border-color: #e53e3e;
     color: #e53e3e;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(229, 62, 62, 0.15);
+}
+
+.time-btn.selected {
+    background-color:#d53030;
+    color: white;
+    border-color: #d53030;
+}
+
+.time-btn.selected {
+    background-color:#d53030;
+    color: white;
+    border-color: #d53030;
 }
 
 .book-btn {
@@ -327,13 +315,13 @@ body{
     box-shadow: 0 6px 19px rgba(229, 62, 62, 0.4);
 }
 
+/* Success Modal */
 #confirmation {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 80vh;
 }
-
 
 .success-box {
     background: #f0fdf4;
@@ -345,15 +333,14 @@ body{
     max-width: 600px;
     margin: auto;
     position: fixed;
-    top: calc(80px + 10vh); /* moves it below navbar */
-    left: 50%;
-    transform: translateX(-60%);
+    top: calc(80px + 10vh);
+    left: 40%;
+    transform: translateX(-50%);
     overflow: hidden;
     border: none;
-    z-index: 2000; /* above navbar */
+    z-index: 1800;
 }
 
-/* blurred backdrop */
 ::backdrop {
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(6px);
@@ -385,28 +372,16 @@ body{
     display: none;
 }
 
-.time-btn.selected {
-  background-color:#d53030;
-  color: white;
-  border-color: #d53030;
-}
-
-.select-button1:hover{
-    border-color: #42b34b;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(229, 62, 62, 0.15);
-}
-
 .close-btn{
-   background-color:var(--theme-clr);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  margin-top:20px;
+    background-color:var(--theme-clr);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top:20px;
 }
 
 .close-btn:hover{
@@ -414,4 +389,373 @@ body{
     background-color: var(--select-clr);
     transform: translateY(1px);
     box-shadow: 0 4px 12px rgba(229, 62, 62, 0.15);
+}
+
+/* responsive design */
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+    .courses {
+        margin: 4rem auto;
+        max-width: 1200px;
+    }
+    
+    .booking-card {
+        margin: 6rem auto 2rem auto;
+        max-width: 1200px;
+    }
+}
+
+/* Desktop (992px to 1199px) */
+@media (max-width: 1199px) {
+    .courses {
+        margin: 4rem 8rem;
+    }
+    
+    .booking-card {
+        margin: 6rem 8rem 2rem 8rem;
+        padding: 3rem 5rem;
+    }
+}
+
+/* Tablet (768px to 991px) */
+@media (max-width: 991px) {
+    .heading {
+        padding: 120px 0 0;
+    }
+    
+    .heading-container {
+        padding: 0 1.5rem;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .courses {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 3rem 4rem;
+    }
+    
+    .booking-card {
+        margin: 4rem 4rem 2rem 4rem;
+        padding: 2.5rem 3rem;
+    }
+    
+    .booking-txts {
+        font-size: 22px;
+    }
+    
+    .time-select {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    
+    .specific-times {
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+        gap: 10px;
+    }
+    
+    .success-box {
+        width: 70vw;
+        padding: 50px 30px;
+    }
+}
+
+/* Small Tablet (576px to 767px) */
+@media (max-width: 767px) {
+    .heading {
+        padding: 100px 0 0;
+    }
+    
+    .heading-container {
+        padding: 0 1rem;
+    }
+    
+    .title {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+    
+    .description {
+        font-size: 0.95rem;
+    }
+    
+    .badge {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+    
+    .login-note {
+        padding: 0.8rem 1.5rem;
+        margin: 1.5rem auto;
+        font-size: 0.9rem;
+    }
+    
+    .courses {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 2.5rem 2rem;
+    }
+    
+    .class-box {
+        padding: 1.5rem;
+    }
+    
+    .card-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+    
+    .titles {
+        font-size: 1.5rem;
+    }
+    
+    .class-price {
+        font-size: 1.8rem;
+    }
+    
+    .booking-card {
+        margin: 3rem 2rem 2rem 2rem;
+        padding: 2rem 1.5rem;
+    }
+    
+    .booking-txts {
+        font-size: 20px;
+    }
+    
+    .time-select {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .time-option {
+        padding: 0.8rem;
+    }
+    
+    .specific-times {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        gap: 8px;
+    }
+    
+    .time-btn {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .success-box {
+        width: 80vw;
+        padding: 40px 25px;
+        top: calc(80px + 5vh);
+    }
+    
+    .success-tick {
+        font-size: 3rem;
+    }
+}
+
+/* Mobile (575px and below) */
+@media (max-width: 575px) {
+    .heading {
+        padding: 80px 0 0;
+    }
+    
+    .heading-container {
+        padding: 0 0.5rem;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+        line-height: 1.1;
+    }
+    
+    .description {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+    }
+    
+    .badge {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+    
+    .login-note {
+        padding: 0.7rem 1rem;
+        margin: 1rem auto;
+        font-size: 0.85rem;
+        max-width: 300px;
+    }
+    
+    .courses {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 2rem 1rem;
+    }
+    
+    .class-box {
+        padding: 1.2rem;
+    }
+    
+    .card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .titles {
+        font-size: 1.3rem;
+    }
+    
+    .descriptions {
+        font-size: 0.9rem;
+    }
+    
+    .class-price {
+        font-size: 1.6rem;
+    }
+    
+    .offer {
+        font-size: 0.9rem;
+    }
+    
+    .free-trial {
+        font-size: 0.9rem;
+        padding: 0.4rem;
+    }
+    
+    .select-button1, .select-button2 {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.95rem;
+    }
+    
+    .booking-card {
+        margin: 2rem 1rem 1rem 1rem;
+        padding: 1.5rem 1rem;
+    }
+    
+    .booking-txts {
+        font-size: 18px;
+    }
+    
+    .form-input {
+        margin-bottom: 25px;
+    }
+    
+    .form-input label {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+    }
+    
+    .hsk-select, .date-select {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    .time-select {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .time-option {
+        padding: 0.7rem;
+    }
+    
+    .time-icon {
+        font-size: 1.2rem;
+    }
+    
+    .specific-times {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        gap: 6px;
+    }
+    
+    .time-btn {
+        padding: 7px 10px;
+        font-size: 0.85rem;
+    }
+    
+    .book-btn {
+        padding: 12px 16px;
+        font-size: 1rem;
+    }
+    
+    #scroll-down {
+        font-size: 16px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .success-box {
+        width: 85vw;
+        padding: 30px 20px;
+        top: calc(80px + 3vh);
+    }
+    
+    .success-tick {
+        font-size: 2.5rem;
+    }
+    
+    .success-description {
+        font-size: 0.9rem;
+    }
+    
+    .success-any {
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra Small Mobile (400px and below) */
+@media (max-width: 400px) {
+    .heading {
+        padding: 60px 0 0;
+    }
+    
+    .title {
+        font-size: 1.5rem;
+    }
+    
+    .description {
+        font-size: 0.85rem;
+    }
+    
+    .courses {
+        margin: 1.5rem 0.5rem;
+    }
+    
+    .class-box {
+        padding: 1rem;
+    }
+    
+    .booking-card {
+        margin: 1.5rem 0.5rem 1rem 0.5rem;
+        padding: 1rem 0.8rem;
+    }
+    
+    .booking-txts {
+        font-size: 16px;
+    }
+    
+    .time-select {
+        gap: 8px;
+    }
+    
+    .specific-times {
+        grid-template-columns: repeat(auto-fit, minmax(45px, 1fr));
+        gap: 5px;
+    }
+    
+    .time-btn {
+        padding: 6px 8px;
+        font-size: 0.8rem;
+    }
+    
+    .success-box {
+        width: 90vw;
+        padding: 25px 15px;
+    }
+    
+    .success-tick {
+        font-size: 2rem;
+    }
 }

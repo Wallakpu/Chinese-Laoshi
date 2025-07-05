@@ -13,23 +13,24 @@
     
     <header class="header">
         <div class="nav-container">
-        <div class="logo">
+            <div class="logo">
                 <div class="logo-icon">中</div>
                 Chinese Laoshi
             </div>
-        <div class ="nav-links" id="navMenu">
-            <li><a href="./pages/character.html">HSK Characters</a></li>
-            <li><a href="./pages/lesson.html">Online Classes</a></li>
-            <li><a href="./pages/quiz.html">Level Test</a></li>
-            <li><a href="./pages/premium.html">Premium</a></li>
-            <li><a href="./pages/books.html">Books</a></li>
-            <li><a href="./pages/about.html">About Us</a></li>
-            <li><a href= "./pages/login.html" class="login-btn"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login</a></li>  
-        </div>  
-       </div>
+            <div class="hamburger" onclick="showbar()">☰</div>
+            <div class ="nav-links" id="navMenu">
+                <li><a href="./pages/character.html">HSK Characters</a></li>
+                <li><a href="./pages/lesson.html">Online Classes</a></li>
+                <li><a href="./pages/quiz.html">Level Test</a></li>
+                <li><a href="./pages/premium.html">Premium</a></li>
+                <li><a href="./pages/books.html">Books</a></li>
+                <li><a href="./pages/about.html">About Us</a></li>
+                <li><a href= "./pages/login.html" class="login-btn"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login</a></li>  
+            </div>  
+        </div>
     </header>
 
-    <!--Hero section-->
+    <!--main section-->
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content fade-in">
@@ -269,5 +270,12 @@
                 Made with love for Chinese learners worldwide.
             </p>
     </footer>
+<script>
+  function showbar() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("show");
+  }
+</script>
+
 </body>
 </html>

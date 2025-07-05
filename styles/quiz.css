@@ -289,17 +289,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        height: auto;
-        padding: 1rem 0;
-    }
-
-    .nav-links {
-        margin: 1rem 0;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
 
     .test-title {
         font-size: 2rem;

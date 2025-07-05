@@ -1,86 +1,113 @@
-*{
-    margin: 0;
-    padding: 0;
+:root {
+    --theme-clr: #e53e3e;
+    --light-gray: #f9f9f9;
+    --text-clr: #333;
+    --border-clr: #ddd;
+}
+
+* {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--light-gray);
+    color: var(--text-clr);
+    line-height: 1.6;
+    padding: 2rem 1rem;
 }
 
 .container {
-     display: flex;
-    flex-direction: column; /* stack children vertically */
-    justify-content: center;
-    align-items: center;
-    height: 520px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-    padding: 20px;
-    background-color: white;
-    border-radius: 12px;
-    width: fit-content;
-    margin-left: 300px;
-    margin-top:50px ;
-
- 
-
-    
-
-}
-.row {
-    width: 300px;
-      display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 2rem auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.column {
-    width: 300px;
-}
-
-.column {
+form {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
-.form {
-    display: flex;
-    gap: 40px; /* Optional spacing between row and column */
-    font-size: large;
+
+.row, .column {
+    flex: 1 1 400px;
 }
+
+h1 {
+    color: var(--theme-clr);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #555;
+}
+
 input {
-    width: 300px;
-    height: 40px;
-    gap: 10px;
-    font-size: 16px;
-    padding-left: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid var(--border-clr);
+    border-radius: 6px;
+    margin-top: 0.4rem;
+    transition: border 0.3s;
 }
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+
+input:focus {
+    border-color: var(--theme-clr);
+    outline: none;
 }
-i {
-    margin-top: 10px;
-}
-.button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+
+img#cards {
+    margin: 0.5rem 0 1rem;
+    max-width: 100%;
+    height: auto;
 }
 
 .button {
-     transition: all 0.3s ease;
-      background: #e74c3c;
-     border: none;
-     border-radius: 10px;
-      font-size: 20px;
-            font-weight: 600;
-            color: white;
+    background-color: var(--theme-clr);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
-.reserved{
-   text-align: end;
-   padding-right: 10px;
+
+.button:hover {
+    background-color: #c0392b;
 }
 
+.reserved {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #999;
+}
 
+i {
+    display: block;
+    margin-top: 1rem;
+    font-style: italic;
+    color: #777;
+}
 
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    form {
+        flex-direction: column;
+    }
+}
