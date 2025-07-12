@@ -30,36 +30,6 @@ function setActiveLevel(level) {
     loadCharacterData(level).then(renderCharacters);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.hsk-level').forEach(button => {
-        button.addEventListener('click', () => {
-            const level = parseInt(button.dataset.level);
-            if (level >= 4) {
-                alert('This level requires premium membership. Please upgrade to access HSK 5-6 content.');
-                return;
-            }
-            setActiveLevel(level);
-        });
-    });
-
-    // Load initial HSK 1
-    loadCharacterData(1).then(renderCharacters);
-
-    // Add interactivity to cards
-    document.addEventListener('click', (e) => {
-        if (e.target.closest('.character-card')) {
-            const card = e.target.closest('.character-card');
-            const character = card.querySelector('.character').textContent;
-            const pinyin = card.querySelector('.pinyin').textContent;
-            const meaning = card.querySelector('.meaning').textContent;
-            console.log(`Character: ${character}, Pinyin: ${pinyin}, Meaning: ${meaning}`);
-            card.style.transform = 'scale(0.95)';
-            setTimeout(() => { card.style.transform = ''; }, 150);
-        }
-    });
-});
-
-
 // read the data from the JSON file
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -99,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function speakChinese(text) {
         const utterance = new SpeechSynthesisUtterance(text);
         utterance.lang = "zh-CN"; // 🇨🇳 Chinese
-        utterance.rate = 0.9; // slightly slower = better for learners
+        utterance.rate = 0.5; // slightly slower = better for learners
         speechSynthesis.speak(utterance);
     }
 });
