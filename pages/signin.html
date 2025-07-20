@@ -1,50 +1,66 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="../styles/signin.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Sign In - Chinese Laoshi</title>
+    <link rel="stylesheet" href="../styles/login.css"> <!-- Reusing login styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="../scripts/auth.js"></script>
 </head>
 <body>
-
-
-<div class="container">
-        <div class="logo">
-            <div class="logo-icon">中</div>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="logo">
+                <div class="logo-icon">中</div>
+                <span>Chinese Laoshi</span>
+            </div>
+            
+            <h2>Sign In</h2>
+            
+            <form id="signinForm">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                
+                <button type="submit" class="login-button">
+                    <i class="fas fa-sign-in-alt"></i> Sign In
+                </button>
+            </form>
+            
+            <div class="signup-link">
+                <p>Don't have an account? <a href="./signup.html">Sign up</a></p>
+                <p><a href="./forgot-password.html">Forgot password?</a></p>
+            </div>
         </div>
-        <div class="heading">
-            <h2>Welcome Back!</h2>
-        </div>
-
-        <p> Sign in to continue your chinese learning journey</p>
-       
-        <div class="input-type" >
-            <input type="email" name="Email"  id="email" placeholder="Email" required><i class="bx bxs-envelope"></i>
-        </div>
-        <div class="input-type">
-            <input type="password" id="password" placeholder="Password" required><i class='bx bx-lock'></i>
-        </div>
-        
-        <div class="checkbox">
-            <label>
-                <input type="checkbox"> Remember me
-            </label>
-            <a href="#">Forget password?</a>
-        </div>
-        <div class="submit">
-            <button onclick="logIn()">Login</button>
-        </div>
-
-        <div class="account">
-            <p>Don't have an account?
-            <a href="../pages/login.html">Sign Up</a></p>
-        </div>
-          <p id="message"></p>
-
-        </div>
-
     </div>
-    <script src="../script/signin.js"></script>
+
+    <script>
+        document.getElementById('signinForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // In a real app, you would verify credentials with your backend
+            // For this demo, we'll just check they're not empty
+            if (username && password) {
+                // Store login state
+                // After successful login
+                     localStorage.setItem('isLoggedIn', 'true');
+                     localStorage.setItem('username', username);
+                     window.location.href = '../index.html'; // Redirect to home
+                // Redirect to profile page
+                window.location.href = '../pages/profile.html';
+            } else {
+                alert('Please enter both username and password!');
+            }
+        });
+    </script>
 </body>
 </html>

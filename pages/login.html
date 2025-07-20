@@ -3,54 +3,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="../styles/login.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
-    
-    <div class="container">
-        <div class="logo">
-            <div class="logo-icon">中</div>
-        </div>
-        <div class="heading">
-            <h2>Welcome Back!</h2>
-        </div>
-
-        <p> Sign up to continue your chinese learning journey</p>
-        <div class="input-type">
-            <input type="text" placeholder="Full Name" required><i class='bx bxs-user'></i>
-        </div>
-        <div class="input-type" >
-            <input type="email" name="Email"  id="email" placeholder="Email" required><i class="bx bxs-envelope"></i>
-        </div>
-        <div class="input-type">
-            <input type="password" id="password" placeholder="Password" required><i class='bx bx-lock'></i>
-        </div>
+    <title>Login - Chinese Laoshi</title>
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* Login Page Specific Styles */
+        :root {
+            --primary-color: #e53e3e;
+            --primary-dark: #c53030;
+            --text-color: #333;
+            --light-gray: #f5f5f5;
+            --white: #ffffff;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
         
-        <div class="input-type">
-            <input type="password" id="password" placeholder="Confirm password" required><i class='bx bx-lock'></i>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-gray);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .login-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .login-card {
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            width: 100%;
+            max-width: 420px;
+            padding: 2.5rem;
+            text-align: center;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+        
+        .logo-icon {
+            font-size: 2.5rem;
+            margin-right: 0.75rem;
+            font-weight: bold;
+        }
+        
+        .logo span {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        h2 {
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            font-size: 1.75rem;
+        }
+        
+        #loginForm {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        
+        .input-group {
+            position: relative;
+        }
+        
+        #loginForm input {
+            width: 100%;
+            padding: 0.9rem 1rem 0.9rem 2.5rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        #loginForm input:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.2);
+        }
+        
+        .input-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+        }
+        
+        #loginForm button {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 0.9rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 0.5rem;
+        }
+        
+        #loginForm button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .signup-link {
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            color: #666;
+        }
+        
+        .signup-link a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .login-card {
+                padding: 1.75rem;
+            }
+            
+            .logo {
+                margin-bottom: 1.5rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+<</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="logo">
+                <div class="logo-icon">中</div>
+                <span>Chinese Laoshi</span>
+            </div>
+            
+            <h2>Welcome Back!</h2>
+            
+            <form id="loginForm">
+                <div class="input-group">
+                    <i class="fas fa-user input-icon"></i>
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-lock input-icon"></i>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                
+                <button type="submit">Login</button>
+            </form>
+            
+            <div class="signup-link">
+                <p>New user? <a href="./signup.html">Create account</a></p>
+            </div>
         </div>
-    
-    
-        <div class="checkbox">
-            <label>
-                <input type="checkbox"> Remember me
-            </label>
-        </div>
-        <div class="submit">
-            <button onclick="signUp() , displayweb()">Create Account</button>
-        </div>
-
-        <div class="account">
-            <p>Already have an account?
-            <a href="../pages/signin.html">Sign in</a></p>
-        </div>
-          <p id="message"></p>
-
     </div>
-    <script src="../script/signin.js"></script>
-    <script src="../script/login.js"></script>
-    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if already logged in
+            if (localStorage.getItem('isLoggedIn') === 'true') {
+                redirectToHome();
+            }
+
+            const loginForm = document.getElementById('loginForm');
+            
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const username = document.getElementById('username').value.trim();
+                    const password = document.getElementById('password').value.trim();
+
+                    if (username && password) {
+                        // Show loading state
+                        const submitBtn = e.target.querySelector('button[type="submit"]');
+                        submitBtn.disabled = true;
+                        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Logging in...';
+                        
+                        // Simulate login process
+                        simulateLogin(username)
+                            .then(() => {
+                                redirectToHome();
+                            })
+                            .catch(error => {
+                                console.error('Login failed:', error);
+                                submitBtn.disabled = false;
+                                submitBtn.textContent = 'Login';
+                                alert('Login failed. Please try again.');
+                            });
+                    } else {
+                        alert('Please enter both username and password!');
+                    }
+                });
+            }
+
+            function simulateLogin(username) {
+                return new Promise((resolve) => {
+                    // Simulate network delay
+                    setTimeout(() => {
+                        localStorage.setItem('isLoggedIn', 'true');
+                        localStorage.setItem('username', username);
+                        resolve();
+                    }, 1000);
+                });
+            }
+
+            function redirectToHome() {
+                // Get the correct base path
+                const basePath = window.location.pathname.includes('/pages/') ? '../' : './';
+                window.location.href = basePath + 'index.html';
+            }
+        });
+    </script>
 </body>
 </html>

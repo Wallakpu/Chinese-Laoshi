@@ -1,13 +1,21 @@
-const displayweb =() => {
-    const password=document.getElementById("password").value;
-    const email=document.getElementById("email").value;
-    if(password.length<8){
-        alert("Password must be 8 character");
+document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.getElementById('loginForm');
+    
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            // Call the login function from auth.js
+            if (typeof handleLogin === 'function') {
+                handleLogin(username, password);
+            } else {
+                console.error('handleLogin function not found');
+                // Fallback redirect
+                window.location.href = '../index.html';
+            }
+        });
     }
-    else if(!email.includes("@")){
-        alert("Incorrect email! Please try again");
-    }
-    else {
-          window.location.href = "../index.html";
-    }
-}
+});

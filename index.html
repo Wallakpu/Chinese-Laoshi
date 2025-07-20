@@ -26,7 +26,18 @@
                 <li><a href="./pages/premium.html">Premium</a></li>
                 <li><a href="./pages/books.html">Books</a></li>
                 <li><a href="./pages/about.html">About Us</a></li>
-                <li><a href="./pages/login.html" class="login-btn"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login</a></li>  
+                <ul class="nav-links" id="navMenu">
+    <!-- ... other menu items ... -->
+                <li id="loginLi">
+    <a href="./pages/signin.html" class="login-btn">
+        <i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Sign In
+    </a>
+          </li>
+                <li id="profileLi" style="display:none;">
+                <a href="./pages/profile.html"><i class="fa-solid fa-user"></i>&nbsp;Profile</a>
+                </li>
+                </ul>
+                <ul class="nav-links" id="navMenu">
             </ul>  
         </div>
     </header>
@@ -293,6 +304,17 @@
                 Made with love for Chinese learners worldwide.
             </p>
         </footer>
+<script src="./scripts/auth.js"></script>
 <script src="./script/navbar.js"></script>
+<script src="./script/navbar.js"></script>
+<script>
+    // Check login state on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        if (localStorage.getItem('isLoggedIn')) {
+            document.getElementById('loginLi').style.display = 'none';
+            document.getElementById('profileLi').style.display = 'block';
+        }
+    });
+</script>
 </body>
 </html>

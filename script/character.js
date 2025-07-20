@@ -3,7 +3,7 @@ let currentLevel = 1;
 
 async function loadCharacterData(level) {
     try {
-        const response = await fetch(`../json/hsk${level}.json`);
+        const response = await fetch(`./json/hsk${level}.json`);
         if (!response.ok) throw new Error("Failed to load character data");
         return await response.json();
     } catch (err) {

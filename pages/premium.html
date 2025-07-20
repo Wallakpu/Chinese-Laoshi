@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/premium.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referreferrer="no-referrer" />
+    <script src="../scripts/auth.js"></script>
 </head>
 <body>
         <header class="header">
-        <div class="nav-container">
+     <div class="nav-container">
             <div class="logo">
                 <div class="logo-icon">中</div>
                  <a href="../index.html" style="text-decoration: none; color:#e53e3e;">Chinese Laoshi</a>
@@ -24,7 +25,7 @@
                 <li><a href="./premium.html">Premium</a></li>
                 <li><a href="./books.html">Books</a></li>
                 <li><a href="./about.html">About Us</a></li>
-                <li><a href="./login.html" class="login-btn"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login</a></li>  
+                <li><a href="./profile.html"><i class="fa-solid fa-user"></i> Profile</a></i></a></li>  
             </ul>  
         </div>
     </header>
@@ -40,9 +41,10 @@
                    Get unlimited access to all HSK levels and premium features to accelarate your Chinese learning journey.
                 </p>
             </div>
-            <div class="login-note">
-                    Please sign up or log in to access premium features.
-            </div>
+            <div id="loginNote" class="login-note">
+    <i class="fas fa-info-circle"></i>
+    <span class="note-text">Please sign in to access your learning dashboard</span>
+</div>
         </div>
     </section>
 
@@ -172,6 +174,7 @@
     </footer>
     <script src="../script/Premium.js"></script>
     <script src="/script/navbar.js"></script>
+    <script src="./scripts/auth.js"></script>
     
 </body>
 </html>
