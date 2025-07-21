@@ -31,7 +31,7 @@ const logout = (e) => {
     updateNavbar();
     
     setTimeout(() => {
-        window.location.href = "../index.html"; // Going back to parent directory
+        window.location.href = "/index.html"; // Going back to parent directory
     }, 500);
 }
 
@@ -51,7 +51,7 @@ const signUp=()=>{
         updateNavbar();
 
         setTimeout(() => {
-            window.location.href = "../index.html";
+            window.location.href = "/index.html";
         }, 500);
 
     } else {
@@ -74,7 +74,7 @@ const logIn=()=>{
         updateNavbar();
 
         setTimeout(() => {
-            window.location.href = "../index.html";
+            window.location.href = "/index.html";
         }, 500);
     } else {
        alert("Invalid email or password!");
