@@ -1,77 +1,94 @@
-// Function to handle login
-function handleLogin(username, password) {
-    // In a real app, you would validate credentials with a server
-    // For demo purposes, we'll just check if fields aren't empty
-    if (username && password) {
-        // Store login state
-        localStorage.setItem('isLoggedIn', 'true');
-        localStorage.setItem('username', username);
-        
-        // Update UI
-        updateAuthButton();
-        
-        // Redirect to index.html
-        window.location.href = '../index.html';
-        return true;
-    } else {
-        alert('Please enter both username and password');
-        return false;
-    }
+// Function to check if user is logged in
+const isUserLoggedIn = () => {
+    const email = localStorage.getItem("Email");
+    const password = localStorage.getItem("Password");
+    return email && password;
 }
 
-// Function to handle logout
-function handleLogout() {
-    localStorage.removeItem('isLoggedIn');
-    localStorage.removeItem('username');
-    updateAuthButton();
-    window.location.href = '../index.html';
-}
-
-// Function to check login status
-function checkAuth() {
-    return localStorage.getItem('isLoggedIn') === 'true';
-}
-
-// Update auth button (as previously shown)
-function updateAuthButton() {
-    const authButtonContainer = document.getElementById('authButtonContainer');
-    const isLoggedIn = checkAuth();
-    const username = localStorage.getItem('username');
-
-    if (isLoggedIn) {
-        authButtonContainer.innerHTML = `
-            <div class="profile-dropdown">
-                <button class="profile-btn" id="profileButton">
-                    <i class="fa-solid fa-user"></i>&nbsp;${username || 'Profile'}
-                </button>
-                <div class="dropdown-content">
-                    <a href="./profile.html">My Profile</a>
-                    <a href="#" id="logoutLink">Logout</a>
-                </div>
-            </div>
-        `;
-
-        document.getElementById('logoutLink')?.addEventListener('click', function(e) {
-            e.preventDefault();
-            handleLogout();
-        });
-    } else {
-        authButtonContainer.innerHTML = `
-            <a href="./login.html" class="login-btn" id="authButton">
-                <i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login
-            </a>
-        `;
-    }
-}
-
-// Initialize auth state when page loads
-document.addEventListener('DOMContentLoaded', function() {
-    updateAuthButton();
+// Function to update navbar based on login status
+const updateNavbar = () => {
+    const loginBtn = document.querySelector('.login-btn');
     
-    // Handle storage events (for when login state changes in another tab)
-    window.addEventListener('storage', function(e) {
-        if (e.key === 'isLoggedIn') {
-            updateAuthButton();
-        }
-    });
+    if (isUserLoggedIn()) {
+        // User is logged in - show logout
+        loginBtn.innerHTML = '<i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;Logout';
+        loginBtn.href = '#';
+        loginBtn.onclick = logout;
+    } else {
+        // User is not logged in - show login
+        loginBtn.innerHTML = '<i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login';
+        loginBtn.href = './login.html';
+        loginBtn.onclick = null;
+    }
+}
+
+// Logout function
+const logout = (e) => {
+    e.preventDefault();
+    localStorage.removeItem("Email");
+    localStorage.removeItem("Password");
+    alert("Logged out successfully!");
+    updateNavbar();
+    
+    setTimeout(() => {
+        window.location.href = "../index.html"; // Going back to parent directory
+    }, 500);
+}
+
+
+//For sign-up 
+const signUp=()=>{
+    const email=document.getElementById("email").value;
+    const password=document.getElementById("password").value;
+
+    if(email && password){
+        localStorage.setItem("Email",email);
+        localStorage.setItem("Password",password);
+
+        alert("Sign Up Successfully!");
+        
+        // Update navbar after successful signup
+        updateNavbar();
+
+        setTimeout(() => {
+            window.location.href = "../index.html";
+        }, 500);
+
+    } else {
+        alert("Please fill up both field to sign up!");
+    }
+}
+
+// For login
+const logIn=()=>{
+    const email=document.getElementById("email").value;
+    const password=document.getElementById("password").value;
+
+    const savedEmail=localStorage.getItem("Email");
+    const savedPassword=localStorage.getItem("Password");
+
+    if(email==savedEmail && password==savedPassword){
+        alert("Login Successfull!");
+        
+        // Updated navbar after successful login
+        updateNavbar();
+
+        setTimeout(() => {
+            window.location.href = "../index.html";
+        }, 500);
+    } else {
+       alert("Invalid email or password!");
+    }
+}
+
+// Initialize navbar when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    updateNavbar();
+});
+
+// Listen for storage changes (if user logs in/out in another tab)
+window.addEventListener('storage', (e) => {
+    if (e.key === 'Email' || e.key === 'Password') {
+        updateNavbar();
+    }
 });
