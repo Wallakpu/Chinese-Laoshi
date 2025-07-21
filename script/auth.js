@@ -7,20 +7,32 @@ const isUserLoggedIn = () => {
 
 // Function to update navbar based on login status
 const updateNavbar = () => {
-    const loginBtn = document.querySelector('.login-btn');
-    
-    if (isUserLoggedIn()) {
-        // User is logged in - show logout
-        loginBtn.innerHTML = '<i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;Logout';
-        loginBtn.href = '#';
-        loginBtn.onclick = logout;
-    } else {
-        // User is not logged in - show login
-        loginBtn.innerHTML = '<i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login';
-        loginBtn.href = './login.html';
-        loginBtn.onclick = null;
+    const container = document.getElementById('login-container');
+    container.innerHTML = ''; // clear old button
+
+    const btn = document.createElement('a');
+    btn.classList.add('login-btn');
+
+    // Dynamically build login page path
+    const currentPath = window.location.pathname;
+    let loginPagePath = 'login.html'; 
+    if (currentPath.includes('/pages/')) {
+        loginPagePath = '../login.html';
     }
+
+    if (isUserLoggedIn()) {
+        btn.innerHTML = '<i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;Logout';
+        btn.href = '#';
+        btn.onclick = logout;
+    } else {
+        btn.innerHTML = '<i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;Login';
+        btn.href = loginPagePath;
+        btn.onclick = null;
+    }
+
+    container.appendChild(btn);
 }
+
 
 // Logout function
 const logout = (e) => {
