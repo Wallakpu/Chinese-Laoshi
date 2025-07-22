@@ -1,20 +1,24 @@
-const payBtn=document.getElementsByClassName("button")[0];
-const dialog=document.getElementsByClassName("modal")[0];
-const closeBtn=document.getElementsByClassName("close-btn")[0];
+const payBtn = document.getElementsByClassName("button")[0];
+const dialog = document.getElementsByClassName("modal")[0];
+const closeBtn = document.getElementsByClassName("close-btn")[0];
 const form = document.querySelector(".form");
 
+// Show dialog box if form is filled
 payBtn.addEventListener("click", () => {
-  if (form.checkValidity()) { // it will checks whether the field is filled up or not and if it is filled it will open dialog box
-    dialog.showModal();
+  if (form.checkValidity()) {
+    dialog.showModal(); // payment modal
   } else {
-    form.reportValidity();  // if the field is not fill up then it will ask to fill
+    form.reportValidity(); // form not filled warning
   }
 });
 
-    closeBtn.addEventListener("click",()=>{
-        dialog.close();
-        window.location.href="../pages/character.html";
-    })
+// When the payment is successful and user clicks close
+closeBtn.addEventListener("click", () => {
+  dialog.close();
 
-paymentBtn();
+  // Save premium status
+  localStorage.setItem("isPremiumUser", "true");
 
+  // Go to character page
+  window.location.href = "../pages/character.html";
+});
