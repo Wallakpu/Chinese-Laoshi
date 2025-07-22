@@ -299,6 +299,10 @@ span{
     width: 100%;
     max-width: 400px;
   }
+
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr); /* 🧩 3 per row on tablet */
+  }
 }
 
 @media (max-width: 768px) {
@@ -327,14 +331,16 @@ span{
 
   .grid2 img {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px; /* 📸 Shrunk the photo for tablets */
+    height: auto;
     margin: 0 auto;
     display: block;
   }
 
   .team-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr); /* 👥 2 per row on smaller tablets */
     padding: 2rem 1rem;
+    gap: 1.5rem;
   }
 
   .team-avatar img {
@@ -396,5 +402,17 @@ span{
 
   .team-info {
     padding: 1.5rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr; /* 📱 Stack team cards in phones */
+    gap: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .team-avatar img {
+    width: 100%;
+    height: auto;
+    padding: 10px;
   }
 }

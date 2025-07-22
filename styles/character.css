@@ -82,19 +82,19 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
-    margin: 4rem;
-    margin-bottom: 3rem;
+    margin: 2rem auto 3rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
 }
 
 .character-card {
     background: white;
     border-radius: 12px;
-    padding:3rem;
+    padding: 3rem;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: all 0.3s;
     cursor: pointer;
-    ;
 }
 
 .character-card:hover {
@@ -178,11 +178,11 @@ body {
     gap: 1rem;
     margin-bottom: 3rem;
     flex-wrap: wrap;
-    padding: 0 1rem; /* gives spacing on small screens */
+    padding: 0 1rem;
 }
 
 .hsk-level {
-    padding: 10px 40px;
+    padding: 8px 20px;
     border: 2px solid #ddd;
     border-radius: 8px;
     background: white;
@@ -190,10 +190,12 @@ body {
     color: #666;
     transition: all 0.3s;
     cursor: pointer;
-    min-width: 120px;
+    min-width: 100px;
+    max-width: 150px;
+    font-size: 1rem;
     text-align: center;
-    flex: 1 1 150px; /* allows flexibility */
-    max-width: 200px;
+    white-space: nowrap;
+    flex: 1 1 auto;
 }
 
 .hsk-level.active {
@@ -212,27 +214,46 @@ body {
     font-size: 1.1rem;
 }
 
-/* 🌟 Responsive tweaks */
 @media (max-width: 768px) {
-    .hsk-levels {
-        justify-content: center;
-        gap: 0.75rem;
+    .characters-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        margin: 1.5rem auto 2rem auto;
+    }
+
+    .character-card {
+        padding: 2rem;
+        font-size: 0.9rem;
     }
 
     .hsk-level {
-        padding: 10px 20px;
-        font-size: 0.95rem;
+        padding: 6px 16px;
+        font-size: 0.9rem;
+        min-width: 90px;
+        max-width: 130px;
     }
 }
 
 @media (max-width: 480px) {
+    .characters-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        margin: 1rem auto 1.5rem auto;
+    }
+
+    .character-card {
+        padding: 1.5rem;
+        font-size: 0.85rem;
+    }
+
     .hsk-levels {
         flex-direction: column;
-        align-items: center;
+        gap: 0.5rem;
+        padding: 0 0.5rem;
     }
 
     .hsk-level {
         width: 100%;
         max-width: 280px;
+        padding: 8px 12px;
+        font-size: 0.85rem;
     }
 }

@@ -348,25 +348,71 @@ body{
         }
 
 
-        @media (max-width: 768px) {
-            .books-grid {
-                grid-template-columns: 1fr;
-                padding: 20px;
-            }
-            
-            .bundle-section {
-                padding: 24px;
-            }
-            
-            .main-title {
-                font-size: 36px;
-            }
-            
-            .level-header {
-                padding: 24px;
-            }
-            
-            .level-info h2 {
-                font-size: 28px;
-            }
-        }
+@media (max-width: 768px) {
+    .books-grid {
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+        gap: 16px;
+    }
+
+    .bundle-section {
+        margin: 10px;
+        padding: 24px;
+    }
+
+    .main-title {
+        font-size: 32px;
+    }
+
+    .level-header {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .level-info h2 {
+        font-size: 24px;
+    }
+
+    .book-card {
+        padding: 16px;
+    }
+
+    .book-title {
+        font-size: 14px;
+        margin: 8px 12px 0;
+    }
+
+    .book-price {
+        font-size: 18px;
+        margin: 0 12px;
+    }
+
+    .book-rating {
+        margin: 0 12px;
+    }
+
+    .availability {
+        font-size: 12px;
+        margin: 8px 12px;
+    }
+
+    .buy-now-btn,
+    .add-to-cart-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .books-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bundle-section {
+        margin-bottom: 3rem;
+        padding: 16px;
+    }   
+}
+
