@@ -750,8 +750,10 @@ body{
     }
     
     .success-box {
-        width: 90vw;
-        padding: 25px 15px;
+        width: 85vw;
+        padding: 30px 20px;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
     
     .success-tick {
