@@ -7,7 +7,7 @@ const signUp=()=>{
         localStorage.setItem("Email",email);
         localStorage.setItem("Password",password);
 
-        alert("Sign Up Successfully!");
+
 
     } else {
         alert("Please fill up both field to sign up!");
