@@ -32,7 +32,6 @@ const updateNavbar = () => {
 }
 
 
-
 // Logout function
 const logout = (e) => {
     e.preventDefault();
@@ -42,54 +41,8 @@ const logout = (e) => {
     updateNavbar();
     
     setTimeout(() => {
-        window.location.href = "/index.html"; // Going back to parent directory
+        window.location.href = "../index.html"; // Going back to parent directory
     }, 500);
-}
-
-
-//For sign-up 
-const signUp=()=>{
-    const email=document.getElementById("email").value;
-    const password=document.getElementById("password").value;
-
-    if(email && password){
-        localStorage.setItem("Email",email);
-        localStorage.setItem("Password",password);
-
-        alert("Sign Up Successfully!");
-        
-        // Update navbar after successful signup
-        updateNavbar();
-
-        setTimeout(() => {
-            window.location.href = "/index.html";
-        }, 500);
-
-    } else {
-        alert("Please fill up both field to sign up!");
-    }
-}
-
-// For login
-const logIn=()=>{
-    const email=document.getElementById("email").value;
-    const password=document.getElementById("password").value;
-
-    const savedEmail=localStorage.getItem("Email");
-    const savedPassword=localStorage.getItem("Password");
-
-    if(email==savedEmail && password==savedPassword){
-        alert("Login Successfull!");
-        
-        // Updated navbar after successful login
-        updateNavbar();
-
-        setTimeout(() => {
-            window.location.href = "/index.html";
-        }, 500);
-    } else {
-       alert("Invalid email or password!");
-    }
 }
 
 // Initialize navbar when page loads
